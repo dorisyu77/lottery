@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TC Lottery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== MOBILE HEADER (375w) ===== -->
+  <header class="m-header">
+    <div class="m-header__top">
+      <button class="m-header__menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="m-header__home">
+        <img src="assets/ca47751fd5f069cb841b7c77d291558bc27c2f0f.webp" alt="Home">
+      </a>
+      <a href="#" class="m-header__logo-link">
+        <img src="assets/f70129731ae8480c65f87feba0fc6eb07a2ea4a0.webp" alt="Logo" class="m-header__logo">
+      </a>
+      <div class="m-header__right-icons">
+        <a href="#" class="m-header__icon-btn">
+          <img src="assets/2b0ae383bc8ea8a4d09d8cd743a0e261cb34b440.webp" alt="Line">
+        </a>
+        <a href="#" class="m-header__icon-btn">
+          <img src="assets/8b9d855ceed4aa88b8140212dce3b2512e4d8f4a.webp" alt="News">
+        </a>
+      </div>
+    </div>
+    <div class="m-header__balance">
+      <div class="m-header__cashier">
+        <img src="assets/37557aa25794c1959d0300b4a262e372cdf11252.webp" alt="" class="m-header__cashier-img">
+        <span class="m-header__cashier-label">CASH<br>CENTER</span>
+      </div>
+      <div class="m-header__amount-area">
+        <span class="m-header__currency">฿</span>
+        <span class="m-header__amount">2261.00</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE SUB HEADER ===== -->
+  <div class="m-subheader">
+    <button class="m-subheader__back" aria-label="Back">←</button>
+    <div class="m-subheader__tabs">
+      <a href="#" class="m-subheader__tab">Apply for Promotions</a>
+      <a href="#" class="m-subheader__tab">Promotion List</a>
+      <a href="#" class="m-subheader__tab">Rolling Commission</a>
+      <a href="#" class="m-subheader__tab">Reward Point</a>
+      <a href="#" class="m-subheader__tab m-subheader__tab--active">Lottery</a>
+      <a href="#" class="m-subheader__tab">Spin &amp; Win</a>
+      <a href="#" class="m-subheader__tab">Lucky Draw</a>
+      <a href="#" class="m-subheader__tab">Voucher Code</a>
+    </div>
+    <h2 class="m-subheader__title">Lottery</h2>
+  </div>
+
+  <!-- ===== DESKTOP HEADER ===== -->
+  <header class="header">
+    <div class="header__top">
+      <a href="#" class="header__logo">
+        <img src="assets/d10aaf12e312b0197032fd0cd61f0e7707eb014e.webp" alt="Logo" class="header__logo-img">
+      </a>
+      <div class="header__actions">
+        <!-- Balance -->
+        <div class="header__balance-box">
+          <div class="header__balance-box-border"></div>
+          <div class="header__balance-inner">
+            <div class="header__balance-item header__balance-item--cashier">
+              <img src="assets/37557aa25794c1959d0300b4a262e372cdf11252.webp" alt="" class="header__cashier-icon">
+              <div class="header__cashier-label">
+                <span class="header__cashier-name">CASH</span>
+                <span class="header__cashier-sub">CENTER</span>
+              </div>
+            </div>
+            <div class="header__balance-item header__balance-amount">
+              <span class="header__currency">฿</span>
+              <span class="header__amount">2261.00</span>
+            </div>
+          </div>
+        </div>
+        <!-- Member -->
+        <div class="header__member-box">
+          <div class="header__member-box-border"></div>
+          <div class="header__member-inner">
+            <a href="#" class="header__member-link">Member Center</a>
+            <span class="header__member-divider"></span>
+            <a href="#" class="header__member-logout">Log Out</a>
+          </div>
+        </div>
+        <!-- Theme toggle -->
+        <div class="header__theme-toggle">
+          <div class="header__theme-knob"></div>
+        </div>
+        <!-- Language -->
+        <div class="header__lang">
+          <img src="assets/50b1dd5d355b323d260ecf7070fc798ea3522095.webp" alt="Language" class="header__flag">
+        </div>
+      </div>
+    </div>
+    <nav class="header__nav">
+      <div class="header__nav-glow"></div>
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#">Sport</a></li>
+        <li class="header__nav-item"><a href="#">Casino</a></li>
+        <li class="header__nav-item"><a href="#">Games</a></li>
+        <li class="header__nav-item header__nav-item--active"><a href="#">Lottery</a></li>
+        <li class="header__nav-item"><a href="#">Promotion</a></li>
+        <li class="header__nav-item"><a href="#">Article</a></li>
+        <li class="header__nav-item"><a href="#">Ranking D&amp;T</a></li>
+      </ul>
+      <div class="header__nav-icons">
+        <a href="#" class="header__nav-icon-btn">
+          <img src="assets/8b9d855ceed4aa88b8140212dce3b2512e4d8f4a.webp" alt="Latest News">
+        </a>
+        <a href="#" class="header__nav-icon-btn">
+          <img src="assets/ad5cce82167dda303de21835328c192ddc953667.webp" alt="APP Download">
+        </a>
+        <a href="#" class="header__nav-icon-btn">
+          <img src="assets/2b0ae383bc8ea8a4d09d8cd743a0e261cb34b440.webp" alt="Line">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="page-body">
+    <div class="layout">
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar">
+        <div class="sidebar__overlay">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf09d;</span>
+            <span class="sidebar__text">Cashier</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf007;</span>
+            <span class="sidebar__text">Profile</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf0c0;</span>
+            <span class="sidebar__text">Referrals</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">✉</span>
+            <span class="sidebar__text">Notifications</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf0f6;</span>
+            <span class="sidebar__text">Promotion List</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+
+          <!-- Submenu -->
+          <ul class="sidebar__submenu">
+            <li class="sidebar__submenu-item"><a href="#">Apply for Promotions</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Promotion List</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Rolling Commission</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Reward Point</a></li>
+            <li class="sidebar__submenu-item sidebar__submenu-item--active"><a href="#">Lottery</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Spin &amp; Win</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Lucky Draw</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Voucher Code</a></li>
+          </ul>
+
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--img">
+              <img src="assets/081ba2280d9795939834edad61cd2a7c66877fa3.webp" alt="">
+            </span>
+            <span class="sidebar__text">History</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf11b;</span>
+            <span class="sidebar__text">Mission Center</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- ===== MAIN CONTENT ===== -->
+      <main class="main">
+        <div class="main__container">
+
+          <!-- Banner -->
+          <div class="lottery-banner">
+            <img src="assets/banner.webp" alt="Lottery Banner" class="lottery-banner__img lottery-banner__img--desktop">
+            <img src="assets/banner-m.webp" alt="Lottery Banner" class="lottery-banner__img lottery-banner__img--mobile">
+            <div class="banner-overlay">
+              <img src="assets/end-time.webp" alt="End Time" class="banner-overlay__endtime">
+              <div class="banner-overlay__date" id="bannerDate">Mon, Dec 29, 2025</div>
+              <div class="banner-overlay__countdown" id="bannerCountdown">
+                <div class="countdown-card">
+                  <div class="countdown-card__flip">
+                    <div class="countdown-card__top"><span id="cdHours">22</span></div>
+                    <div class="countdown-card__bottom"><span id="cdHoursBot">22</span></div>
+                  </div>
+                  <div class="countdown-card__label">Hours</div>
+                </div>
+                <div class="countdown-card">
+                  <div class="countdown-card__flip">
+                    <div class="countdown-card__top"><span id="cdMinutes">09</span></div>
+                    <div class="countdown-card__bottom"><span id="cdMinutesBot">09</span></div>
+                  </div>
+                  <div class="countdown-card__label">Minutes</div>
+                </div>
+                <div class="countdown-card">
+                  <div class="countdown-card__flip">
+                    <div class="countdown-card__top"><span id="cdSeconds">59</span></div>
+                    <div class="countdown-card__bottom"><span id="cdSecondsBot">59</span></div>
+                  </div>
+                  <div class="countdown-card__label">Seconds</div>
+                </div>
+              </div>
+              <div class="banner-overlay__prize" id="bannerPrize">$888</div>
+            </div>
+          </div>
+
+          <!-- Title -->
+          <div class="lottery-title">
+            <h2 class="lottery-title__heading">Choose your number</h2>
+            <a href="history.html" class="lottery-title__history">
+              <span>History</span>
+              <span class="lottery-title__chevron">›</span>
+            </a>
+          </div>
+
+          <!-- Number Grid + Side Panel -->
+          <div class="lottery-content">
+            <!-- Number Grid -->
+            <div class="number-grid" id="numberGrid">
+              <!-- JS will generate 100 balls (00-99) -->
+            </div>
+
+            <!-- Side Panel -->
+            <div class="side-panel">
+              <!-- Selection Panel -->
+              <div class="selection-panel" id="selectionPanel">
+                <div class="selection-panel__header">
+                  <h3 class="selection-panel__title">我的選號</h3>
+                  <span class="selection-panel__remaining" id="selectionRemaining">剩 10</span>
+                </div>
+                <div class="selection-panel__body" id="selectionBody">
+                  <p class="selection-panel__empty">尚未選擇任何號碼</p>
+                  <p class="selection-panel__hint">點擊數字開始選號</p>
+                </div>
+                <div class="selection-panel__picks-wrapper" id="selectionPicksWrapper">
+                  <div class="selection-panel__picks" id="selectionPicks"></div>
+                </div>
+                <button class="selection-panel__btn" id="selectionBtn" disabled>確認投注</button>
+              </div>
+
+              <!-- Rule Panel -->
+              <div class="rule-panel">
+                <h3 class="rule-panel__title">選號規則</h3>
+                <div class="rule-panel__list">
+                  <div class="rule-panel__item">
+                    <span class="rule-panel__num">1</span>
+                    <span class="rule-panel__desc">每個號碼最多可選擇 <strong>5 次</strong></span>
+                  </div>
+                  <div class="rule-panel__item">
+                    <span class="rule-panel__num">2</span>
+                    <span class="rule-panel__desc">多次選擇同一號碼可增加中獎機率</span>
+                  </div>
+                  <div class="rule-panel__item">
+                    <span class="rule-panel__num">3</span>
+                    <span class="rule-panel__desc">若多人同時中獎，獎金將平均分配</span>
+                  </div>
+                  <div class="rule-panel__item">
+                    <span class="rule-panel__num">4</span>
+                    <span class="rule-panel__desc">🔥 標記為熱門號碼（5人以上選擇）</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Style Legend -->
+          <div class="style-legend">
+            <div class="style-legend__divider"></div>
+            <div class="style-legend__items">
+              <div class="style-legend__item">
+                <span class="legend-ball legend-ball--available"></span>
+                <span class="style-legend__label">可選</span>
+              </div>
+              <div class="style-legend__item">
+                <span class="legend-ball legend-ball--selected"></span>
+                <span class="style-legend__label">已選</span>
+              </div>
+              <div class="style-legend__item">
+                <span class="legend-ball legend-ball--hot"></span>
+                <span class="style-legend__label">熱門號碼</span>
+              </div>
+              <div class="style-legend__item">
+                <span class="legend-ball legend-ball--maxed"></span>
+                <span class="style-legend__label">已達上限</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <!-- Information -->
+        <div class="footer__col">
+          <h4 class="footer__heading">INFORMATION</h4>
+          <ul class="footer__list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">User Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Payment Methods</a></li>
+            <li><a href="#">Betting Rules</a></li>
+            <li><a href="#">Agent Joining</a></li>
+          </ul>
+        </div>
+        <!-- Quick Link -->
+        <div class="footer__col">
+          <h4 class="footer__heading">QUICK LINK</h4>
+          <ul class="footer__list">
+            <li><a href="#">APP Download</a></li>
+            <li><a href="#">How to Deposit</a></li>
+            <li><a href="#">How to Withdraw</a></li>
+          </ul>
+        </div>
+        <!-- Contact Us -->
+        <div class="footer__col">
+          <h4 class="footer__heading">CONTACT US</h4>
+          <ul class="footer__list footer__list--contact">
+            <li>
+              <img src="assets/d1cf7fd58d7d59b6881e920593bef3b24e77d10f.webp" alt="" class="footer__contact-icon">
+              <a href="#">Click Here</a>
+            </li>
+            <li>
+              <img src="assets/167f10d4cbf07545caea6008acb82bf8f24c47b9.webp" alt="" class="footer__contact-icon">
+              <span>(+66) 086-399-9995</span>
+            </li>
+            <li>
+              <img src="assets/893dbe65d52bcbc450d8ec6c810c5d4000c12fb7.webp" alt="" class="footer__contact-icon">
+              <span>IG</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Game Providers -->
+        <div class="footer__col footer__col--wide">
+          <h4 class="footer__heading">Game Providers</h4>
+          <div class="footer__providers">
+            <img src="assets/deba996e30649b7bd1e8f9b392ee8300c197052e.webp" alt="JDB">
+            <img src="assets/22475b223d712c6bc4bf200233a6453b88696321.webp" alt="PT">
+            <img src="assets/de775032f2ab1a295f48ac7289fc61c1a2f4a733.webp" alt="SA">
+            <img src="assets/fc66f87d29aec3e14230dd347fd26cd14e660bc7.webp" alt="SEXY">
+            <img src="assets/f1b60cb60a7c153f7441347543f8f30ba4bcc04a.webp" alt="AG">
+            <img src="assets/00cf808fd44ddef5c704e9969bdaf883fe2b5ce7.webp" alt="MRG">
+            <img src="assets/ae5a7f6c82789c8f769c834d8d3ca1df8965daef.webp" alt="BNG">
+            <img src="assets/c7480f76227fe4612060155388eae31e043cee63.webp" alt="PLS">
+            <img src="assets/13591f6911d1d340523cff601f94f98fd8790625.webp" alt="NT">
+            <img src="assets/52b7ba37a866b376141d57dc103bd99f4063861a.webp" alt="PNG">
+            <img src="assets/15e4e06b351f2fbba0e789e9bb75eacd603ffd32.webp" alt="LD">
+            <img src="assets/2e436a16f5a32f2b55af461170e39aca78f2f303.webp" alt="QS">
+            <img src="assets/be247b92f1036a06e5789cf722e5861ef0164045.webp" alt="NLC">
+            <img src="assets/a3f08111d6cba7a6f30f7be36236e90c5919aa9d.webp" alt="SG">
+            <img src="assets/5569603d980813ff3752eb23875127f6676794c6.webp" alt="CQ9">
+            <img src="assets/68af6a07f524347ff4a9c754e655a564255a246f.webp" alt="EVO">
+            <img src="assets/1ad12caa8f06a012729cd099d5cf8910ff7f0247.webp" alt="MV">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <p>Copyright &copy; 2025 cash2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE BOTTOM PANEL (固定底部) ===== -->
+  <div class="m-bottom-panel">
+    <div class="m-bottom-panel__info">
+      <span class="m-bottom-panel__title">我的選號</span>
+      <span class="m-bottom-panel__remaining" id="mSelectionRemaining">剩 10</span>
+    </div>
+    <div class="m-bottom-panel__body" id="mSelectionBody">
+      <p class="m-bottom-panel__empty">尚未選擇任何號碼</p>
+      <p class="m-bottom-panel__hint">點擊數字開始選號</p>
+    </div>
+    <div class="m-bottom-panel__picks" id="mSelectionPicks"></div>
+    <p class="m-bottom-panel__player-count" id="mPlayerCount"></p>
+    <button class="m-bottom-panel__btn" id="mSelectionBtn" disabled>確認投注</button>
+  </div>
+
+  <!-- ===== MOBILE BOTTOM NAV ===== -->
+  <nav class="m-bottom-nav">
+    <a href="#" class="m-bottom-nav__item m-bottom-nav__item--active">
+      <span class="m-bottom-nav__icon">🎰</span>
+      <span class="m-bottom-nav__label">Lottery</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">⚽</span>
+      <span class="m-bottom-nav__label">Sports</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">🃏</span>
+      <span class="m-bottom-nav__label">Casino</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">🎮</span>
+      <span class="m-bottom-nav__label">Games</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">👤</span>
+      <span class="m-bottom-nav__label">Member</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

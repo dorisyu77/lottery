@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中獎彈窗 Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #8b1a32 0%, #6b1528 50%, #4a101c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 觸發按鈕 */
+        .trigger-btn {
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        .trigger-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.5);
+        }
+
+        /* ===== 彈窗遮罩 ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ===== 彈窗主體 ===== */
+        .win-modal {
+            background: #1b1b1b;
+            border-radius: 16px;
+            padding: 10px 20px 40px;
+            max-width: 480px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            border: none;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            transform: scale(0.8);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-overlay.active .win-modal {
+            transform: scale(1);
+        }
+
+        /* 關閉按鈕 */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 34px;
+            height: 38px;
+            border-radius: 6px;
+            background: transparent;
+            border: none;
+            color: #989a9d;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            color: white;
+        }
+
+        /* 頂部裝飾 */
+        .modal-decoration {
+            font-size: 40px;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: trophyBounce 1s ease-in-out infinite;
+        }
+
+        @keyframes trophyBounce {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        /* 標題 */
+        .modal-title {
+            font-size: 35.2px;
+            font-weight: 600;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(107deg, #fef3c7 0%, #fbbf24 50%, #f59e0b 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            animation: shine 2s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* 中獎號碼 */
+        .winning-ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #fef3c7 0%, #ffc634 30%, #ffb12e 60%, #ff9113 100%);
+            border: 3px solid #e6a23c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 900;
+            font-family: 'Arial Black', sans-serif;
+            color: black;
+            margin: 0;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            animation: ballPulse 2s ease-in-out infinite, ballFloat 3s ease-in-out infinite;
+        }
+
+        .winning-ball::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 14px;
+            width: 23px;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            transform: rotate(-30deg);
+        }
+
+        @keyframes ballPulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+            50% { box-shadow: 0 4px 25px rgba(251, 191, 36, 0.5); }
+        }
+
+        @keyframes ballFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* 獎金 */
+        .prize-label {
+            font-size: 14.4px;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+
+        .prize-amount {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            color: #4391e7;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            margin: 0;
+        }
+
+        .prize-amount .currency {
+            font-size: 24px;
+        }
+
+        .prize-amount .value {
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        /* 分獎資訊 */
+        .split-box {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-radius: 12px;
+            padding: 8px 0;
+            width: 350px;
+        }
+
+        .split-title {
+            color: #f87171;
+            font-size: 12.8px;
+            font-weight: 600;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            margin-bottom: 4px;
+        }
+
+        .split-row {
+            display: flex;
+            justify-content: center;
+            gap: 42px;
+        }
+
+        .split-item {
+            text-align: center;
+        }
+
+        .split-value {
+            font-size: 19.2px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin-bottom: 2px;
+        }
+
+        .split-label {
+            font-size: 11.2px;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 獎金區塊容器 */
+        .prize-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* 確認按鈕 */
+        .confirm-btn {
+            width: 350px;
+            padding: 18px;
+            font-size: 17.6px;
+            font-weight: 600;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1a1a2e;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+
+        .confirm-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
+        }
+
+        /* ===== Confetti ===== */
+        .confetti {
+            position: fixed;
+            top: -20px;
+            pointer-events: none;
+            z-index: 1001;
+            animation: confettiFall linear forwards;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(var(--rotation));
+                opacity: 0.7;
+            }
+        }
+
+        /* ===== 金幣 ===== */
+        .coin {
+            position: fixed;
+            font-size: 1.5rem;
+            pointer-events: none;
+            z-index: 1001;
+            animation: coinDrop ease-in forwards;
+        }
+
+        @keyframes coinDrop {
+            0% {
+                transform: translateY(-30px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0.8;
+            }
+        }
+
+        /* ===== 煙火 ===== */
+        .firework {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        .firework-particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: fireworkBurst 1.2s ease-out forwards;
+        }
+
+        @keyframes fireworkBurst {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(0);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 觸發按鈕 -->
+    <button class="trigger-btn" onclick="showWinModal()">
+        🎰 模擬中獎
+    </button>
+
+    <!-- 彈窗 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="win-modal">
+            <!-- 關閉按鈕 -->
+            <button class="close-btn" onclick="closeModal()">✕</button>
+
+            <!-- 內容 -->
+            <div class="modal-decoration">🏆</div>
+            <h2 class="modal-title">恭喜中獎！</h2>
+
+            <div class="winning-ball" id="winBall">33</div>
+
+            <div class="prize-label">您贏得了</div>
+            <div class="prize-section">
+                <div class="prize-amount">
+                    <span class="currency">$</span><span class="value" id="prizeNum">10,000</span>
+                </div>
+
+                <div class="split-box">
+                    <div class="split-title">多人共同中獎</div>
+                    <div class="split-row">
+                        <div class="split-item">
+                            <div class="split-value">$3,333</div>
+                            <div class="split-label">您的份額</div>
+                        </div>
+                        <div class="split-item">
+                            <div class="split-value">3</div>
+                            <div class="split-label">中獎人數</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="confirm-btn" onclick="closeModal()">太棒了！</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 顯示彈窗
+        function showWinModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            startEffects();
+        }
+
+        // 關閉彈窗
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+        }
+
+        // 啟動特效
+        function startEffects() {
+            createConfetti();
+            // createCoins(); // 移除金幣動畫
+            setTimeout(() => createFireworks(), 300);
+        }
+
+        // Confetti
+        function createConfetti() {
+            const colors = ['#ff0000', '#fbbf24', '#10b981', '#6366f1', '#ec4899', '#00ffff'];
+            const shapes = ['■', '▲', '★'];
+
+            for (let i = 0; i < 80; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.fontSize = (8 + Math.random() * 15) + 'px';
+                    confetti.style.setProperty('--rotation', (Math.random() * 1080) + 'deg');
+                    confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
+                    document.body.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 4000);
+                }, i * 25);
+            }
+        }
+
+        // 金幣
+        function createCoins() {
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const coin = document.createElement('div');
+                    coin.className = 'coin';
+                    coin.textContent = '🪙';
+                    coin.style.left = Math.random() * 100 + 'vw';
+                    coin.style.animationDuration = (1.5 + Math.random() * 1.5) + 's';
+                    document.body.appendChild(coin);
+                    setTimeout(() => coin.remove(), 3000);
+                }, 200 + i * 80);
+            }
+        }
+
+        // 煙火
+        function createFireworks() {
+            const colors = ['#ff0000', '#fbbf24', '#10b981', '#ec4899', '#00ffff'];
+
+            for (let f = 0; f < 4; f++) {
+                setTimeout(() => {
+                    const x = Math.random() * window.innerWidth;
+                    const y = 100 + Math.random() * (window.innerHeight * 0.4);
+
+                    const container = document.createElement('div');
+                    container.className = 'firework';
+                    container.style.left = x + 'px';
+                    container.style.top = y + 'px';
+
+                    for (let i = 0; i < 20; i++) {
+                        const particle = document.createElement('div');
+                        particle.className = 'firework-particle';
+                        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                        particle.style.boxShadow = `0 0 4px ${particle.style.background}`;
+
+                        const angle = (Math.PI * 2 * i) / 20;
+                        const velocity = 40 + Math.random() * 60;
+                        particle.style.setProperty('--tx', Math.cos(angle) * velocity + 'px');
+                        particle.style.setProperty('--ty', Math.sin(angle) * velocity + 'px');
+
+                        container.appendChild(particle);
+                    }
+
+                    document.body.appendChild(container);
+                    setTimeout(() => container.remove(), 1200);
+                }, f * 300);
+            }
+        }
+
+        // 點擊遮罩關閉
+        document.getElementById('modalOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

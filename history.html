@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TC Lottery - History</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="history.css">
+</head>
+<body>
+
+  <!-- ===== MOBILE HEADER (375w) ===== -->
+  <header class="m-header">
+    <div class="m-header__top">
+      <button class="m-header__menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="m-header__home">
+        <img src="assets/ca47751fd5f069cb841b7c77d291558bc27c2f0f.webp" alt="Home">
+      </a>
+      <a href="#" class="m-header__logo-link">
+        <img src="assets/f70129731ae8480c65f87feba0fc6eb07a2ea4a0.webp" alt="Logo" class="m-header__logo">
+      </a>
+      <div class="m-header__right-icons">
+        <a href="#" class="m-header__icon-btn">
+          <img src="assets/2b0ae383bc8ea8a4d09d8cd743a0e261cb34b440.webp" alt="Line">
+        </a>
+        <a href="#" class="m-header__icon-btn">
+          <img src="assets/8b9d855ceed4aa88b8140212dce3b2512e4d8f4a.webp" alt="News">
+        </a>
+      </div>
+    </div>
+    <div class="m-header__balance">
+      <div class="m-header__cashier">
+        <img src="assets/37557aa25794c1959d0300b4a262e372cdf11252.webp" alt="" class="m-header__cashier-img">
+        <span class="m-header__cashier-label">CASH<br>CENTER</span>
+      </div>
+      <div class="m-header__amount-area">
+        <span class="m-header__currency">฿</span>
+        <span class="m-header__amount">2261.00</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE SUB HEADER ===== -->
+  <div class="m-subheader">
+    <button class="m-subheader__back" aria-label="Back">←</button>
+    <div class="m-subheader__tabs">
+      <a href="#" class="m-subheader__tab">Apply for Promotions</a>
+      <a href="#" class="m-subheader__tab">Promotion List</a>
+      <a href="#" class="m-subheader__tab">Rolling Commission</a>
+      <a href="#" class="m-subheader__tab">Reward Point</a>
+      <a href="#" class="m-subheader__tab m-subheader__tab--active">Lottery</a>
+      <a href="#" class="m-subheader__tab">Spin &amp; Win</a>
+      <a href="#" class="m-subheader__tab">Lucky Draw</a>
+      <a href="#" class="m-subheader__tab">Voucher Code</a>
+    </div>
+    <h2 class="m-subheader__title">Lottery</h2>
+  </div>
+
+  <!-- ===== DESKTOP HEADER ===== -->
+  <header class="header">
+    <div class="header__top">
+      <a href="#" class="header__logo">
+        <img src="assets/d10aaf12e312b0197032fd0cd61f0e7707eb014e.webp" alt="Logo" class="header__logo-img">
+      </a>
+      <div class="header__actions">
+        <div class="header__balance-box">
+          <div class="header__balance-box-border"></div>
+          <div class="header__balance-inner">
+            <div class="header__balance-item header__balance-item--cashier">
+              <img src="assets/37557aa25794c1959d0300b4a262e372cdf11252.webp" alt="" class="header__cashier-icon">
+              <div class="header__cashier-label">
+                <span class="header__cashier-name">CASH</span>
+                <span class="header__cashier-sub">CENTER</span>
+              </div>
+            </div>
+            <div class="header__balance-item header__balance-amount">
+              <span class="header__currency">฿</span>
+              <span class="header__amount">2261.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="header__member-box">
+          <div class="header__member-box-border"></div>
+          <div class="header__member-inner">
+            <a href="#" class="header__member-link">Member Center</a>
+            <span class="header__member-divider"></span>
+            <a href="#" class="header__member-logout">Log Out</a>
+          </div>
+        </div>
+        <div class="header__theme-toggle">
+          <div class="header__theme-knob"></div>
+        </div>
+        <div class="header__lang">
+          <img src="assets/50b1dd5d355b323d260ecf7070fc798ea3522095.webp" alt="Language" class="header__flag">
+        </div>
+      </div>
+    </div>
+    <nav class="header__nav">
+      <div class="header__nav-glow"></div>
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#">Sport</a></li>
+        <li class="header__nav-item"><a href="#">Casino</a></li>
+        <li class="header__nav-item"><a href="#">Games</a></li>
+        <li class="header__nav-item header__nav-item--active"><a href="#">Lottery</a></li>
+        <li class="header__nav-item"><a href="#">Promotion</a></li>
+        <li class="header__nav-item"><a href="#">Article</a></li>
+        <li class="header__nav-item"><a href="#">Ranking D&amp;T</a></li>
+      </ul>
+      <div class="header__nav-icons">
+        <a href="#" class="header__nav-icon-btn">
+          <img src="assets/8b9d855ceed4aa88b8140212dce3b2512e4d8f4a.webp" alt="Latest News">
+        </a>
+        <a href="#" class="header__nav-icon-btn">
+          <img src="assets/ad5cce82167dda303de21835328c192ddc953667.webp" alt="APP Download">
+        </a>
+        <a href="#" class="header__nav-icon-btn">
+          <img src="assets/2b0ae383bc8ea8a4d09d8cd743a0e261cb34b440.webp" alt="Line">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="page-body">
+    <div class="layout">
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar">
+        <div class="sidebar__overlay">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf09d;</span>
+            <span class="sidebar__text">Cashier</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf007;</span>
+            <span class="sidebar__text">Profile</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf0c0;</span>
+            <span class="sidebar__text">Referrals</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">✉</span>
+            <span class="sidebar__text">Notifications</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf0f6;</span>
+            <span class="sidebar__text">Promotion List</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <ul class="sidebar__submenu">
+            <li class="sidebar__submenu-item"><a href="#">Apply for Promotions</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Promotion List</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Rolling Commission</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Reward Point</a></li>
+            <li class="sidebar__submenu-item sidebar__submenu-item--active"><a href="#">Lottery</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Spin &amp; Win</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Lucky Draw</a></li>
+            <li class="sidebar__submenu-item"><a href="#">Voucher Code</a></li>
+          </ul>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--img">
+              <img src="assets/081ba2280d9795939834edad61cd2a7c66877fa3.webp" alt="">
+            </span>
+            <span class="sidebar__text">History</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon sidebar__icon--white">&#xf11b;</span>
+            <span class="sidebar__text">Mission Center</span>
+            <span class="sidebar__arrow">&#xf105;</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- ===== MAIN CONTENT ===== -->
+      <main class="main">
+        <div class="main__container">
+
+          <!-- Banner -->
+          <div class="lottery-banner">
+            <img src="assets/banner.webp" alt="Lottery Banner" class="lottery-banner__img lottery-banner__img--desktop">
+            <img src="assets/banner-m.webp" alt="Lottery Banner" class="lottery-banner__img lottery-banner__img--mobile">
+            <div class="banner-overlay">
+              <img src="assets/end-time.webp" alt="End Time" class="banner-overlay__endtime">
+              <div class="banner-overlay__date" id="bannerDate">Mon, Dec 29, 2025</div>
+              <div class="banner-overlay__countdown" id="bannerCountdown">
+                <div class="countdown-card">
+                  <div class="countdown-card__flip">
+                    <div class="countdown-card__top"><span id="cdHours">22</span></div>
+                    <div class="countdown-card__bottom"><span id="cdHoursBot">22</span></div>
+                  </div>
+                  <div class="countdown-card__label">Hours</div>
+                </div>
+                <div class="countdown-card">
+                  <div class="countdown-card__flip">
+                    <div class="countdown-card__top"><span id="cdMinutes">09</span></div>
+                    <div class="countdown-card__bottom"><span id="cdMinutesBot">09</span></div>
+                  </div>
+                  <div class="countdown-card__label">Minutes</div>
+                </div>
+                <div class="countdown-card">
+                  <div class="countdown-card__flip">
+                    <div class="countdown-card__top"><span id="cdSeconds">59</span></div>
+                    <div class="countdown-card__bottom"><span id="cdSecondsBot">59</span></div>
+                  </div>
+                  <div class="countdown-card__label">Seconds</div>
+                </div>
+              </div>
+              <div class="banner-overlay__prize" id="bannerPrize">$888</div>
+            </div>
+          </div>
+
+          <!-- Title -->
+          <div class="history-title">
+            <a href="index.html" class="history-title__back">
+              <span class="history-title__chevron">‹</span>
+              <span>Choose Number</span>
+            </a>
+            <h2 class="history-title__heading">History</h2>
+          </div>
+
+          <!-- Stats Blocks -->
+          <div class="history-stats">
+            <div class="history-stat">
+              <span class="history-stat__value">10</span>
+              <span class="history-stat__label">總投注次數</span>
+            </div>
+            <div class="history-stat">
+              <span class="history-stat__value history-stat__value--orange">2</span>
+              <span class="history-stat__label">中獎次數</span>
+            </div>
+            <div class="history-stat">
+              <span class="history-stat__value">20%</span>
+              <span class="history-stat__label">中獎率</span>
+            </div>
+            <div class="history-stat">
+              <span class="history-stat__value history-stat__value--teal">100.00</span>
+              <span class="history-stat__label">總獲獎金額</span>
+            </div>
+          </div>
+
+          <!-- Record List -->
+          <div class="history-records">
+
+            <!-- Record 1: 尚未開獎 -->
+            <div class="history-record">
+              <div class="history-record__left">
+                <span class="history-record__period">第 2024012 期</span>
+                <div class="history-record__ball history-record__ball--gray">
+                  <span class="history-record__ball-num">33</span>
+                </div>
+                <div class="history-record__info">
+                  <span class="history-record__prize">獎金池 $10,000</span>
+                  <span class="history-record__winners">2 人中獎</span>
+                </div>
+              </div>
+              <div class="history-record__right">
+                <span class="history-record__status history-record__status--pending">尚未開獎</span>
+                <div class="history-record__balls">
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <span class="history-record__more">⌄</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Record 2: 未中獎 -->
+            <div class="history-record">
+              <div class="history-record__left">
+                <span class="history-record__period">第 2024012 期</span>
+                <div class="history-record__ball history-record__ball--gray">
+                  <span class="history-record__ball-num">33</span>
+                </div>
+                <div class="history-record__info">
+                  <span class="history-record__prize">獎金池 $10,000</span>
+                  <span class="history-record__winners">2 人中獎</span>
+                </div>
+              </div>
+              <div class="history-record__right">
+                <span class="history-record__status history-record__status--lost">未中獎</span>
+                <div class="history-record__balls">
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <span class="history-record__more">⌄</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Record 3: 未中獎 -->
+            <div class="history-record">
+              <div class="history-record__left">
+                <span class="history-record__period">第 2024012 期</span>
+                <div class="history-record__ball history-record__ball--gray">
+                  <span class="history-record__ball-num">33</span>
+                </div>
+                <div class="history-record__info">
+                  <span class="history-record__prize">獎金池 $10,000</span>
+                  <span class="history-record__winners">2 人中獎</span>
+                </div>
+              </div>
+              <div class="history-record__right">
+                <span class="history-record__status history-record__status--lost">未中獎</span>
+                <div class="history-record__balls">
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <span class="history-record__more">⌄</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Record 4: 中獎 (winning) -->
+            <div class="history-record history-record--won">
+              <div class="history-record__left">
+                <span class="history-record__period">第 2024012 期</span>
+                <div class="history-record__ball history-record__ball--gold">
+                  <span class="history-record__ball-num">33</span>
+                </div>
+                <div class="history-record__info">
+                  <span class="history-record__prize">獎金池 $10,000</span>
+                  <span class="history-record__winners">2 人中獎</span>
+                </div>
+              </div>
+              <div class="history-record__right">
+                <span class="history-record__status history-record__status--won">中獎</span>
+                <div class="history-record__balls">
+                  <div class="history-record__mini-ball history-record__mini-ball--gold"><span>33</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <div class="history-record__mini-ball history-record__mini-ball--selected"><span>50</span></div>
+                  <span class="history-record__more">⌄</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination -->
+          <div class="history-pagination">
+            <button class="history-pagination__btn" disabled>‹</button>
+            <span class="history-pagination__page history-pagination__page--active">1</span>
+            <button class="history-pagination__btn">›</button>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4 class="footer__heading">INFORMATION</h4>
+          <ul class="footer__list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">User Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Payment Methods</a></li>
+            <li><a href="#">Betting Rules</a></li>
+            <li><a href="#">Agent Joining</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">QUICK LINK</h4>
+          <ul class="footer__list">
+            <li><a href="#">APP Download</a></li>
+            <li><a href="#">How to Deposit</a></li>
+            <li><a href="#">How to Withdraw</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">CONTACT US</h4>
+          <ul class="footer__list footer__list--contact">
+            <li>
+              <img src="assets/d1cf7fd58d7d59b6881e920593bef3b24e77d10f.webp" alt="" class="footer__contact-icon">
+              <a href="#">Click Here</a>
+            </li>
+            <li>
+              <img src="assets/167f10d4cbf07545caea6008acb82bf8f24c47b9.webp" alt="" class="footer__contact-icon">
+              <span>(+66) 086-399-9995</span>
+            </li>
+            <li>
+              <img src="assets/893dbe65d52bcbc450d8ec6c810c5d4000c12fb7.webp" alt="" class="footer__contact-icon">
+              <span>IG</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--wide">
+          <h4 class="footer__heading">Game Providers</h4>
+          <div class="footer__providers">
+            <img src="assets/deba996e30649b7bd1e8f9b392ee8300c197052e.webp" alt="JDB">
+            <img src="assets/22475b223d712c6bc4bf200233a6453b88696321.webp" alt="PT">
+            <img src="assets/de775032f2ab1a295f48ac7289fc61c1a2f4a733.webp" alt="SA">
+            <img src="assets/fc66f87d29aec3e14230dd347fd26cd14e660bc7.webp" alt="SEXY">
+            <img src="assets/f1b60cb60a7c153f7441347543f8f30ba4bcc04a.webp" alt="AG">
+            <img src="assets/00cf808fd44ddef5c704e9969bdaf883fe2b5ce7.webp" alt="MRG">
+            <img src="assets/ae5a7f6c82789c8f769c834d8d3ca1df8965daef.webp" alt="BNG">
+            <img src="assets/c7480f76227fe4612060155388eae31e043cee63.webp" alt="PLS">
+            <img src="assets/13591f6911d1d340523cff601f94f98fd8790625.webp" alt="NT">
+            <img src="assets/52b7ba37a866b376141d57dc103bd99f4063861a.webp" alt="PNG">
+            <img src="assets/15e4e06b351f2fbba0e789e9bb75eacd603ffd32.webp" alt="LD">
+            <img src="assets/2e436a16f5a32f2b55af461170e39aca78f2f303.webp" alt="QS">
+            <img src="assets/be247b92f1036a06e5789cf722e5861ef0164045.webp" alt="NLC">
+            <img src="assets/a3f08111d6cba7a6f30f7be36236e90c5919aa9d.webp" alt="SG">
+            <img src="assets/5569603d980813ff3752eb23875127f6676794c6.webp" alt="CQ9">
+            <img src="assets/68af6a07f524347ff4a9c754e655a564255a246f.webp" alt="EVO">
+            <img src="assets/1ad12caa8f06a012729cd099d5cf8910ff7f0247.webp" alt="MV">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <p>Copyright &copy; 2025 cash2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE BOTTOM NAV ===== -->
+  <nav class="m-bottom-nav">
+    <a href="#" class="m-bottom-nav__item m-bottom-nav__item--active">
+      <span class="m-bottom-nav__icon">🎰</span>
+      <span class="m-bottom-nav__label">Lottery</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">⚽</span>
+      <span class="m-bottom-nav__label">Sports</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">🃏</span>
+      <span class="m-bottom-nav__label">Casino</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">🎮</span>
+      <span class="m-bottom-nav__label">Games</span>
+    </a>
+    <a href="#" class="m-bottom-nav__item">
+      <span class="m-bottom-nav__icon">👤</span>
+      <span class="m-bottom-nav__label">Member</span>
+    </a>
+  </nav>
+
+  <!-- ===== MODAL: 恭喜中獎 (auto-open on load) ===== -->
+  <div class="win-overlay is-open" id="congratsModal">
+    <div class="win-modal">
+      <button class="win-modal__close" id="congratsModalClose">✕</button>
+      <div class="win-modal__decoration">🏆</div>
+      <h2 class="win-modal__title">恭喜中獎！</h2>
+      <div class="win-modal__ball" id="winBall">33</div>
+      <div class="win-modal__prize-label">您贏得了</div>
+      <div class="win-modal__prize-section">
+        <div class="win-modal__prize-amount">
+          <span class="win-modal__currency">$</span><span class="win-modal__value">10,000</span>
+        </div>
+        <div class="win-modal__split-box">
+          <div class="win-modal__split-title">多人共同中獎</div>
+          <div class="win-modal__split-row">
+            <div class="win-modal__split-item">
+              <div class="win-modal__split-value">$3,333</div>
+              <div class="win-modal__split-label">您的份額</div>
+            </div>
+            <div class="win-modal__split-item">
+              <div class="win-modal__split-value">3</div>
+              <div class="win-modal__split-label">中獎人數</div>
+            </div>
+          </div>
+        </div>
+        <button class="win-modal__confirm" onclick="document.getElementById('congratsModal').classList.remove('is-open')">太棒了！</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: Your Number ===== -->
+  <div class="history-modal-overlay" id="historyModal">
+    <div class="history-modal">
+      <button class="history-modal__close" id="historyModalClose">&times;</button>
+      <h3 class="history-modal__heading">Your Number</h3>
+      <p class="history-modal__period" id="historyModalPeriod">第 2024012 期</p>
+      <div class="history-modal__grid" id="historyModalGrid">
+        <!-- 100 balls generated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    /* ---- History Page: Modal Logic ---- */
+    (function () {
+      const overlay = document.getElementById('historyModal');
+      const closeBtn = document.getElementById('historyModalClose');
+      const gridEl = document.getElementById('historyModalGrid');
+      const periodEl = document.getElementById('historyModalPeriod');
+      if (!overlay || !gridEl) return;
+
+      // Demo data per record (index 0-3)
+      const recordData = [
+        { period: '第 2024012 期', selected: [3,8,15,22,33,41,50,64,78,90], winning: null },
+        { period: '第 2024012 期', selected: [5,11,27,33,46,50,59,72,85,96], winning: null },
+        { period: '第 2024012 期', selected: [1,14,20,33,38,50,55,68,80,92], winning: null },
+        { period: '第 2024012 期', selected: [7,19,24,33,43,50,61,75,83,99], winning: 33 },
+      ];
+
+      function openModal(recordIndex) {
+        const data = recordData[recordIndex] || recordData[0];
+        periodEl.textContent = data.period;
+
+        const selectedSet = new Set(data.selected);
+        let html = '';
+        for (let i = 0; i < 100; i++) {
+          const num = i.toString().padStart(2, '0');
+          let cls = 'history-modal__ball';
+          if (data.winning !== null && i === data.winning) {
+            cls += ' history-modal__ball--gold';
+          } else if (selectedSet.has(i)) {
+            cls += ' history-modal__ball--selected';
+          } else {
+            cls += ' history-modal__ball--gray';
+          }
+          html += `<div class="${cls}"><span>${num}</span></div>`;
+        }
+        gridEl.innerHTML = html;
+        overlay.classList.add('is-open');
+      }
+
+      function closeModal() {
+        overlay.classList.remove('is-open');
+      }
+
+      // Close on X button
+      closeBtn.addEventListener('click', closeModal);
+
+      // Close on overlay click (outside modal)
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal();
+      });
+
+      // Attach click handlers to each record's balls area and more arrow
+      document.querySelectorAll('.history-record').forEach(function (record, index) {
+        const ballsArea = record.querySelector('.history-record__balls');
+        const moreBtn = record.querySelector('.history-record__more');
+        if (ballsArea) {
+          ballsArea.style.cursor = 'pointer';
+          ballsArea.addEventListener('click', function () { openModal(index); });
+        }
+        if (moreBtn) {
+          moreBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            openModal(index);
+          });
+        }
+      });
+    })();
+
+    /* ---- Win Modal (Congrats) ---- */
+    (function () {
+      const overlay = document.getElementById('congratsModal');
+      const closeBtn = document.getElementById('congratsModalClose');
+      if (!overlay) return;
+
+      function close() { overlay.classList.remove('is-open'); }
+      closeBtn.addEventListener('click', close);
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+
+      // Launch effects on load
+      startWinEffects();
+
+      function startWinEffects() {
+        createConfetti();
+        setTimeout(createFireworks, 300);
+      }
+
+      function createConfetti() {
+        var colors = ['#ff0000', '#fbbf24', '#10b981', '#6366f1', '#ec4899', '#00ffff'];
+        var shapes = ['\u25A0', '\u25B2', '\u2605'];
+        for (var i = 0; i < 80; i++) {
+          (function (idx) {
+            setTimeout(function () {
+              var el = document.createElement('div');
+              el.className = 'win-confetti';
+              el.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+              el.style.left = Math.random() * 100 + 'vw';
+              el.style.color = colors[Math.floor(Math.random() * colors.length)];
+              el.style.fontSize = (8 + Math.random() * 15) + 'px';
+              el.style.setProperty('--rotation', (Math.random() * 1080) + 'deg');
+              el.style.animationDuration = (2 + Math.random() * 2) + 's';
+              document.body.appendChild(el);
+              setTimeout(function () { el.remove(); }, 4000);
+            }, idx * 25);
+          })(i);
+        }
+      }
+
+      function createFireworks() {
+        var colors = ['#ff0000', '#fbbf24', '#10b981', '#ec4899', '#00ffff'];
+        for (var f = 0; f < 4; f++) {
+          (function (fi) {
+            setTimeout(function () {
+              var x = Math.random() * window.innerWidth;
+              var y = 100 + Math.random() * (window.innerHeight * 0.4);
+              var container = document.createElement('div');
+              container.className = 'win-firework';
+              container.style.left = x + 'px';
+              container.style.top = y + 'px';
+              for (var i = 0; i < 20; i++) {
+                var p = document.createElement('div');
+                p.className = 'win-firework__particle';
+                p.style.background = colors[Math.floor(Math.random() * colors.length)];
+                p.style.boxShadow = '0 0 4px ' + p.style.background;
+                var angle = (Math.PI * 2 * i) / 20;
+                var vel = 40 + Math.random() * 60;
+                p.style.setProperty('--tx', Math.cos(angle) * vel + 'px');
+                p.style.setProperty('--ty', Math.sin(angle) * vel + 'px');
+                container.appendChild(p);
+              }
+              document.body.appendChild(container);
+              setTimeout(function () { container.remove(); }, 1200);
+            }, fi * 300);
+          })(f);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
