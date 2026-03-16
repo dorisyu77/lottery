@@ -1,3 +1,5 @@
 .DS_Store
 figma-*.png
 figma-*.mjs
+node_modules/
+noUse/
