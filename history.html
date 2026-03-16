@@ -95,6 +95,13 @@
         <div class="header__theme-toggle">
           <div class="header__theme-knob"></div>
         </div>
+        <!-- Theme Switcher -->
+        <div class="header__theme-switcher">
+          <select id="themeSwitcher" class="header__theme-select">
+            <option value="tc_001-sp" selected>tc_001-sp</option>
+            <option value="tc_011-fw8">tc_011-fw8</option>
+          </select>
+        </div>
         <div class="header__lang">
           <img src="assets/50b1dd5d355b323d260ecf7070fc798ea3522095.webp" alt="Language" class="header__flag">
         </div>
@@ -520,6 +527,68 @@
     </div>
   </div>
 
+  <script src="mock-config.js"></script>
+  <script>
+    // Populate HTML mock values from config
+    document.querySelectorAll('.header__amount, .m-header__amount').forEach(function(el) { el.textContent = MOCK.user.balance; });
+    document.querySelectorAll('.header__currency, .m-header__currency').forEach(function(el) { el.textContent = MOCK.user.currency; });
+    var prizeEl = document.getElementById('bannerPrize');
+    if (prizeEl) prizeEl.textContent = MOCK.banner.prize;
+
+    // Populate history stats
+    (function() {
+      var stats = MOCK.historyStats;
+      var els = document.querySelectorAll('.history-stat__value');
+      if (els.length >= 4) {
+        els[0].textContent = stats.totalBets;
+        els[1].textContent = stats.winCount;
+        els[2].textContent = stats.winRate;
+        els[3].textContent = stats.totalPrize;
+      }
+    })();
+
+    // Populate history records from config
+    (function() {
+      var records = MOCK.historyRecords;
+      var statusMap = { pending: '尚未開獎', lost: '未中獎', won: '中獎' };
+      var statusClassMap = { pending: '--pending', lost: '--lost', won: '--won' };
+
+      document.querySelectorAll('.history-record').forEach(function(el, i) {
+        var r = records[i];
+        if (!r) return;
+        var period = el.querySelector('.history-record__period');
+        if (period) period.textContent = r.period;
+        var ballNum = el.querySelector('.history-record__ball-num');
+        if (ballNum) ballNum.textContent = r.drawBall;
+        var prize = el.querySelector('.history-record__prize');
+        if (prize) prize.textContent = '獎金池 ' + r.prizePool;
+        var winners = el.querySelector('.history-record__winners');
+        if (winners) winners.textContent = r.winnersCount + ' 人中獎';
+        var status = el.querySelector('.history-record__status');
+        if (status) {
+          status.textContent = statusMap[r.status] || r.status;
+          status.className = 'history-record__status history-record__status' + (statusClassMap[r.status] || '');
+        }
+        // Populate mini balls
+        var miniBalls = el.querySelectorAll('.history-record__mini-ball span');
+        r.selected.slice(0, miniBalls.length).forEach(function(num, j) {
+          miniBalls[j].textContent = num.toString().padStart(2, '0');
+        });
+      });
+
+      // Populate win modal
+      var wm = MOCK.winModal;
+      var winBall = document.getElementById('winBall');
+      if (winBall) winBall.textContent = wm.ball;
+      var winValue = document.querySelector('.win-modal__value');
+      if (winValue) winValue.textContent = wm.totalPrize;
+      var splitValues = document.querySelectorAll('.win-modal__split-value');
+      if (splitValues.length >= 2) {
+        splitValues[0].textContent = wm.yourShare;
+        splitValues[1].textContent = wm.winnersCount;
+      }
+    })();
+  </script>
   <script src="app.js"></script>
   <script>
     /* ---- History Page: Modal Logic ---- */
@@ -530,13 +599,7 @@
       const periodEl = document.getElementById('historyModalPeriod');
       if (!overlay || !gridEl) return;
 
-      // Demo data per record (index 0-3)
-      const recordData = [
-        { period: '第 2024012 期', selected: [3,8,15,22,33,41,50,64,78,90], winning: null },
-        { period: '第 2024012 期', selected: [5,11,27,33,46,50,59,72,85,96], winning: null },
-        { period: '第 2024012 期', selected: [1,14,20,33,38,50,55,68,80,92], winning: null },
-        { period: '第 2024012 期', selected: [7,19,24,33,43,50,61,75,83,99], winning: 33 },
-      ];
+      const recordData = MOCK.historyRecords;
 
       function openModal(recordIndex) {
         const data = recordData[recordIndex] || recordData[0];
@@ -658,5 +721,6 @@
       }
     })();
   </script>
+  <script src="theme-switcher.js"></script>
 </body>
 </html>

@@ -97,6 +97,13 @@
         <div class="header__theme-toggle">
           <div class="header__theme-knob"></div>
         </div>
+        <!-- Theme Switcher -->
+        <div class="header__theme-switcher">
+          <select id="themeSwitcher" class="header__theme-select">
+            <option value="tc_001-sp" selected>tc_001-sp</option>
+            <option value="tc_011-fw8">tc_011-fw8</option>
+          </select>
+        </div>
         <!-- Language -->
         <div class="header__lang">
           <img src="assets/50b1dd5d355b323d260ecf7070fc798ea3522095.webp" alt="Language" class="header__flag">
@@ -424,6 +431,15 @@
     </a>
   </nav>
 
+  <script src="mock-config.js"></script>
+  <script>
+    // Populate HTML mock values from config
+    document.querySelectorAll('.header__amount, .m-header__amount').forEach(function(el) { el.textContent = MOCK.user.balance; });
+    document.querySelectorAll('.header__currency, .m-header__currency').forEach(function(el) { el.textContent = MOCK.user.currency; });
+    var prizeEl = document.getElementById('bannerPrize');
+    if (prizeEl) prizeEl.textContent = MOCK.banner.prize;
+  </script>
   <script src="app.js"></script>
+  <script src="theme-switcher.js"></script>
 </body>
 </html>

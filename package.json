@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build:themes": "bash build-themes.sh"
+  },
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

@@ -4,71 +4,48 @@
 
 /* ---------- CSS Variables (Design Tokens) ---------- */
 :root {
-  /* Primary */
-  --primary-08: #398c99;
-  --primary-dark: #346970;
-
-  /* Gradients */
-  --gradient-01: #1a1a1a;
-  --gradient-02: #346970;
-
-  /* Emotional */
-  --emotional-01: #e9113c;
-  --emotional-05: #4391e7;
-  --emotional-07: #e6a23c;
-
-  /* Neutral */
-  --neutral-0: #ffffff;
-  --neutral-50: #e9e9e9;
-  --neutral-100: #cfd0d0;
-  --neutral-200: #989a9d;
-  --neutral-300: #555555;
-  --neutral-400: #363636;
-  --neutral-700: #252525;
-  --neutral-1000: #000000;
-
-  /* Accent / Glow */
-  --accent-cyan: #04e4fe;
-  --accent-glow: #18d1ff;
-  --accent-teal: #00a8ac;
-  --accent-border: #c5eeee;
-  --accent-border-light: #b8e4ea;
+  /* Accent / Glow (referencing lottery variables from common) */
+  --accent-cyan: var(--lottery-accent-cyan);
+  --accent-glow: var(--lottery-accent-glow);
+  --accent-teal: var(--lottery-accent-teal);
+  --accent-border: var(--lottery-accent-border);
+  --accent-border-light: var(--lottery-accent-border-light);
 
   /* Header */
-  --header-bg: #000000;
-  --header-overlay: rgba(104, 186, 207, 0.2);
-  --nav-gradient-start: #22282a;
-  --nav-gradient-mid: #1b2123;
-  --nav-gradient-end: #252c2d;
+  --header-bg: var(--lottery-header-bg);
+  --header-overlay: rgba(104, 186, 207, 0.2); /* decorative overlay - no baseColor match */
+  --nav-gradient-start: var(--lottery-nav-gradient-start);
+  --nav-gradient-mid: var(--lottery-nav-gradient-mid);
+  --nav-gradient-end: var(--lottery-nav-gradient-end);
 
   /* Sidebar */
-  --sidebar-bg: rgba(0, 11, 31, 0.4);
-  --sidebar-text: #ffffff;
-  --sidebar-subtext: #bbbbbb;
-  --sidebar-divider: rgba(255, 255, 255, 0.2);
+  --sidebar-bg: var(--lottery-sidebar-bg);
+  --sidebar-text: var(--lottery-sidebar-text);
+  --sidebar-subtext: var(--lottery-sidebar-subtext);
+  --sidebar-divider: var(--lottery-sidebar-divider);
 
   /* Content */
-  --content-bg: #1b2123;
-  --page-bg: #111111;
+  --content-bg: var(--lottery-content-bg);
+  --page-bg: var(--lottery-page-bg);
 
-  /* Ball Gradients */
-  --ball-available: linear-gradient(145deg, #fef3c7 0%, #ffc634 30%, #ffb12e 60%, #ff9113 100%);
-  --ball-available-border: #e6a23c;
-  --ball-selected: linear-gradient(-41deg, var(--gradient-01) 11%, var(--gradient-02) 91%);
-  --ball-selected-border: #398c99;
-  --ball-hot: linear-gradient(145deg, #fed6c7 0%, #fb4f24 30%, #f50b0b 60%, #d90606 100%);
-  --ball-hot-border: #e9113c;
-  --ball-maxed-bg: #cfd0d0;
-  --ball-maxed-border: #cfd0d0;
-  --ball-hot-maxed-bg: #e9113c;
-  --ball-non-winning: linear-gradient(146deg, #cfd0d0 10%, #555555 94%);
-  --ball-non-winning-border: #989a9d;
+  /* Ball Gradients (referencing lottery ball variables from common) */
+  --ball-available: var(--lottery-ball-available-bg);
+  --ball-available-border: var(--lottery-ball-available-border);
+  --ball-selected: var(--lottery-ball-selected-bg);
+  --ball-selected-border: var(--lottery-ball-selected-border);
+  --ball-hot: var(--lottery-ball-hot-bg);
+  --ball-hot-border: var(--lottery-ball-hot-border);
+  --ball-maxed-bg: var(--lottery-ball-disabled-bg);
+  --ball-maxed-border: var(--lottery-ball-disabled-border);
+  --ball-hot-maxed-bg: var(--lottery-ball-hot-maxed-bg);
+  --ball-non-winning: var(--lottery-ball-non-winning-bg);
+  --ball-non-winning-border: var(--lottery-ball-non-winning-border);
 
   /* Footer */
-  --footer-bg: #1b2123;
-  --footer-text: #bbbbbb;
-  --footer-heading: #ffffff;
-  --footer-copyright-bg: #111111;
+  --footer-bg: var(--lottery-footer-bg);
+  --footer-text: var(--lottery-footer-text);
+  --footer-heading: var(--lottery-footer-heading);
+  --footer-copyright-bg: var(--lottery-footer-copyright-bg);
 
   /* Fonts */
   --font-primary: 'Microsoft YaHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
@@ -208,12 +185,12 @@ button {
   position: relative;
   width: 114px;
   height: 100%;
-  background: linear-gradient(0deg, #cfd0d0 0%, #a0b9c4 50%, #fcfbfa 51%, #989a9d 100%);
+  background: linear-gradient(0deg, var(--neutral-100) 0%, #a0b9c4 50%, #fcfbfa 51%, var(--neutral-200) 100%);
   transform: skewX(-20deg);
   margin-left: -10px;
   padding-left: 10px;
   border: 1px solid var(--accent-border-light);
-  box-shadow: 4px 0 5px rgba(109, 230, 255, 0.6);
+  box-shadow: 4px 0 5px rgba(109, 230, 255, 0.6); /* decorative glow shadow */
 }
 
 .header__cashier-icon {
@@ -236,14 +213,14 @@ button {
 .header__cashier-name {
   font-size: 16.9px;
   font-weight: bold;
-  color: #0a1c4c;
+  color: var(--lottery-cashier-text);
   letter-spacing: 1.1px;
   line-height: 1;
 }
 
 .header__cashier-sub {
   font-size: 13.5px;
-  color: #0a1c4c;
+  color: var(--lottery-cashier-text);
   line-height: 1;
 }
 
@@ -309,7 +286,7 @@ button {
 .header__member-divider {
   width: 2px;
   height: 60%;
-  background: #424242;
+  background: var(--neutral-400); /* #424242 → closest: --neutral-400 (#363636) */
 }
 
 .header__member-logout {
@@ -337,6 +314,42 @@ button {
   background: var(--neutral-0);
   border-radius: 50%;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Theme Switcher Dropdown */
+.header__theme-switcher {
+  position: relative;
+}
+
+.header__theme-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--accent-teal);
+  border-radius: 4px;
+  color: var(--neutral-0);
+  font-family: var(--font-primary);
+  font-size: 12px;
+  padding: 4px 24px 4px 8px;
+  cursor: pointer;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2300a8ac'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.header__theme-select:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.header__theme-select:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 4px rgba(4, 228, 254, 0.3);
+}
+
+.header__theme-select option {
+  background: var(--neutral-700);
+  color: var(--neutral-0);
 }
 
 /* Language */
@@ -421,7 +434,7 @@ button {
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  background: #363636;
+  background: var(--lottery-nav-icon-bg);
   border: 4px solid var(--accent-border);
   box-shadow: 0 0 20px 1px rgba(24, 209, 255, 0.8);
   display: flex;
@@ -475,7 +488,7 @@ button {
 }
 
 .sidebar__link:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--lottery-sidebar-hover-bg);
 }
 
 .sidebar__icon {
@@ -487,7 +500,7 @@ button {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: #333;
+  color: var(--lottery-sidebar-icon-text);
   flex-shrink: 0;
 }
 
@@ -594,7 +607,7 @@ button {
   font-family: 'Inter', var(--font-primary);
   font-weight: 800;
   font-size: 21.4px;
-  color: #101820;
+  color: var(--lottery-countdown-date-text);
   padding: 2px 20px;
   text-align: center;
 }
@@ -625,7 +638,7 @@ button {
   left: 0;
   right: 0;
   height: 19.58px;
-  background: #253f43;
+  background: var(--lottery-countdown-card-top-bg);
   border-radius: 4px 4px 0 0;
   display: flex;
   align-items: center;
@@ -637,7 +650,7 @@ button {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 27.2px;
-  color: #ccc;
+  color: var(--lottery-countdown-card-top-text);
   line-height: 25.84px;
   position: relative;
   top: 9px;
@@ -649,8 +662,8 @@ button {
   left: 0;
   right: 0;
   height: 19.58px;
-  background: #346970;
-  border-top: 1px solid #000;
+  background: var(--lottery-countdown-card-bottom-bg);
+  border-top: 1px solid var(--lottery-countdown-card-bottom-border);
   border-radius: 0 0 4px 4px;
   display: flex;
   align-items: center;
@@ -662,7 +675,7 @@ button {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 27.2px;
-  color: #fff;
+  color: var(--lottery-countdown-card-bottom-text);
   line-height: 25.84px;
   position: relative;
   top: -10px;
@@ -671,7 +684,7 @@ button {
 .countdown-card__label {
   font-family: 'Open Sans', sans-serif;
   font-size: 11px;
-  color: #252525;
+  color: var(--lottery-countdown-card-label);
   text-transform: uppercase;
   margin-top: 3px;
   text-align: center;
@@ -681,8 +694,8 @@ button {
   font-family: 'Inter', var(--font-primary);
   font-weight: 800;
   font-size: 41.4px;
-  color: #fff;
-  text-shadow: 2px 2px 0px #150035;
+  color: var(--lottery-countdown-prize-text);
+  text-shadow: 2px 2px 0px #150035; /* decorative shadow - no baseColor match */
   text-align: center;
   line-height: 44px;
   margin-top: 2px;
@@ -702,7 +715,7 @@ button {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 21.4px;
-  color: #101820;
+  color: var(--lottery-title-text);
 }
 
 .lottery-title__history {
@@ -779,14 +792,14 @@ button {
 /* 3. 已選取 (selected) - dark teal gradient, rotating border light */
 .ball--selected {
   background: var(--ball-selected);
-  border: 3px solid #398c99;
+  border: 3px solid var(--lottery-ball-selected-border);
   overflow: visible;
 }
 
 /* 4. 已選取-熱門 (hot-selected) - red gradient, rotating border light */
 .ball--hot-selected {
   background: var(--ball-hot);
-  border: 3px solid #398c99;
+  border: 3px solid var(--lottery-ball-selected-border);
   overflow: visible;
 }
 
@@ -798,15 +811,7 @@ button {
   inset: -3px;
   border-radius: 50%;
   padding: 3px;
-  background: conic-gradient(
-    from 0deg,
-    #398c99 0%,
-    #398c99 70%,
-    #7fdfea 80%,
-    #ffffff 85%,
-    #7fdfea 90%,
-    #398c99 100%
-  );
+  background: var(--gradation-09);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -960,7 +965,7 @@ button {
 /* Selection Panel */
 .selection-panel {
   background: var(--neutral-0);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--lottery-selection-border);
   border-radius: 20px;
   padding: 20px 10px;
   display: flex;
@@ -1041,7 +1046,7 @@ button {
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: var(--neutral-100) #f3f4f6;
+  scrollbar-color: var(--neutral-100) var(--lottery-selection-scrollbar-track);
 }
 
 .selection-panel__picks::-webkit-scrollbar {
@@ -1049,7 +1054,7 @@ button {
 }
 
 .selection-panel__picks::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: var(--lottery-selection-scrollbar-track);
   border-radius: 3px;
 }
 
@@ -1064,7 +1069,7 @@ button {
 
 /* Pick row card */
 .pick-row {
-  background: #f3f4f6;
+  background: var(--lottery-selection-pick-bg);
   border-radius: 12px;
   padding: 12px 16px;
   display: flex;
@@ -1124,7 +1129,7 @@ button {
   width: 25px;
   height: 25px;
   border-radius: 14px;
-  background: #ef4444;
+  background: var(--lottery-delete-bg);
   color: var(--neutral-0);
   font-size: 13px;
   display: flex;
@@ -1138,7 +1143,7 @@ button {
 }
 
 .pick-row__delete:hover {
-  background: #dc2626;
+  background: var(--lottery-delete-hover-bg);
 }
 
 .selection-panel__btn {
@@ -1160,7 +1165,7 @@ button {
 }
 
 .selection-panel__btn:not(:disabled):hover {
-  background: #2d7a86;
+  background: var(--lottery-selection-btn-hover-bg);
 }
 
 /* Rule Panel */
@@ -1210,7 +1215,7 @@ button {
 
 .rule-panel__desc {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--lottery-rule-text-color);
   line-height: 1.46;
 }
 
@@ -1230,7 +1235,7 @@ button {
 .style-legend__divider {
   width: 100%;
   height: 1px;
-  background: #e5e7eb;
+  background: var(--lottery-legend-divider);
 }
 
 .style-legend__items {
@@ -1249,7 +1254,7 @@ button {
 
 .style-legend__label {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--lottery-legend-label);
 }
 
 /* Legend Balls (small) */
@@ -1486,7 +1491,7 @@ button {
     display: block;
     width: 30px;
     height: 4px;
-    background: #76e9f7;
+    background: var(--lottery-mobile-menu-bar);
     border-radius: 10px;
   }
 
@@ -1558,9 +1563,9 @@ button {
   .m-header__cashier-label {
     font-size: 10px;
     font-weight: bold;
-    color: #0a1c4c;
+    color: var(--lottery-cashier-text);
     line-height: 1.1;
-    background: linear-gradient(0deg, #cfd0d0, #a0b9c4 50%, #fcfbfa 51%, #989a9d);
+    background: linear-gradient(0deg, var(--neutral-100), #a0b9c4 50%, #fcfbfa 51%, var(--neutral-200));
     padding: 2px 6px;
     border-radius: 4px;
   }
@@ -1624,7 +1629,7 @@ button {
     font-size: 14px;
     color: var(--sidebar-subtext);
     white-space: nowrap;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--lottery-mobile-tab-border);
     border-radius: 21px;
     margin-right: 8px;
   }
@@ -1763,7 +1768,7 @@ button {
     left: 0;
     right: 0;
     background: var(--neutral-0);
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--lottery-selection-border);
     padding: 8px 26px;
     display: flex;
     flex-direction: column;
@@ -1861,7 +1866,7 @@ button {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #ef4444;
+    background: var(--lottery-delete-bg);
     color: var(--neutral-0);
     font-size: 9px;
     display: flex;
@@ -1906,7 +1911,7 @@ button {
     left: 0;
     right: 0;
     height: 60px;
-    background: #111;
+    background: var(--lottery-mobile-nav-bg);
     display: flex;
     z-index: 100;
   }

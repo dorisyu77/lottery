@@ -4,8 +4,7 @@
 
 /* ---- Banner Countdown Timer ---- */
 (function () {
-  // Demo end time: 30 hours from now
-  const endDate = new Date(Date.now() + 30 * 60 * 60 * 1000);
+  const endDate = new Date(Date.now() + MOCK.banner.countdownHours * 60 * 60 * 1000);
   const dateEl = document.getElementById('bannerDate');
   const hTop = document.getElementById('cdHours');
   const hBot = document.getElementById('cdHoursBot');
@@ -47,22 +46,20 @@
   const grid = document.getElementById('numberGrid');
   if (!grid) return;
 
-  const MAX_PER_BALL = 5;
-  const MAX_TOTAL = 10;
+  const MAX_PER_BALL = MOCK.game.maxPerBall;
+  const MAX_TOTAL = MOCK.game.maxTotal;
 
-  // Demo: some numbers are "hot" (5+ people selected)
-  const hotNumbers = new Set([7, 12, 23, 38, 45, 56, 67, 77, 88, 99]);
+  const hotNumbers = new Set(MOCK.game.hotNumbers);
+  const pc = MOCK.game.playerCount;
 
-  // Simulated player counts for "XX 位玩家同選"
   function getPlayerCount(id) {
-    if (hotNumbers.has(id)) return Math.floor(Math.random() * 20) + 5;
-    return Math.floor(Math.random() * 4) + 1;
+    if (hotNumbers.has(id)) return Math.floor(Math.random() * (pc.hotMax - pc.hotMin + 1)) + pc.hotMin;
+    return Math.floor(Math.random() * (pc.normalMax - pc.normalMin + 1)) + pc.normalMin;
   }
 
-  // Ball data
   const balls = [];
   const ballElements = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < MOCK.game.totalBalls; i++) {
     balls.push({
       id: i,
       remaining: MAX_PER_BALL,
