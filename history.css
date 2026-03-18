@@ -271,6 +271,9 @@
   line-height: 1;
   flex-shrink: 0;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* -- Modal -- */
@@ -795,8 +798,10 @@
 
   .history-record__more {
     grid-column: 1 / -1;
-    text-align: center;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Pagination */
