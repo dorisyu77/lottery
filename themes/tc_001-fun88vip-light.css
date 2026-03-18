@@ -95,6 +95,15 @@ body[data-theme=dark] {
   --lottery-ball-hot-maxed-bg: var(--emotional-01);
   --lottery-ball-non-winning-bg: var(--gradation-08);
   --lottery-ball-non-winning-border: var(--neutral-200);
+  --lottery-ball-number-color: var(--neutral-1000);
+  --lottery-ball-number-selected-color: var(--neutral-0);
+  --lottery-ball-number-disabled-color: var(--neutral-300);
+  --lottery-ball-count-color: var(--neutral-400);
+  --lottery-ball-count-selected-color: var(--neutral-100);
+  --lottery-ball-count-hot-color: var(--neutral-50);
+  --lottery-ball-count-disabled-color: var(--neutral-300);
+  --lottery-ball-count-hot-maxed-color: var(--neutral-0);
+  --lottery-ball-count-winning-color: var(--neutral-700);
   --lottery-selection-bg: var(--neutral-0);
   --lottery-selection-title-color: var(--neutral-400);
   --lottery-selection-badge-bg: var(--primary-08);

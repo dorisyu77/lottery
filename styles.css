@@ -892,7 +892,7 @@ button {
   font-size: 16.25px;
   font-weight: 900;
   line-height: 1;
-  color: var(--neutral-1000);
+  color: var(--lottery-ball-number-color);
 }
 
 /* White text on dark/red/gray-gradient balls */
@@ -903,12 +903,12 @@ button {
 .ball--non-winning .ball__number,
 .ball--not-drawn .ball__number,
 .ball--no-record .ball__number {
-  color: var(--neutral-0);
+  color: var(--lottery-ball-number-selected-color);
 }
 
 /* Gray text on flat gray ball */
 .ball--maxed .ball__number {
-  color: var(--neutral-300);
+  color: var(--lottery-ball-number-disabled-color);
 }
 
 /* Ball count */
@@ -918,34 +918,34 @@ button {
   font-weight: 700;
   opacity: 0.8;
   line-height: 1;
-  color: var(--neutral-400);
+  color: var(--lottery-ball-count-color);
 }
 
 /* Selected count: light gray */
 .ball--selected .ball__count {
-  color: var(--neutral-100);
+  color: var(--lottery-ball-count-selected-color);
 }
 
 /* Hot / hot-selected / non-winning count: off-white */
 .ball--hot .ball__count,
 .ball--hot-selected .ball__count,
 .ball--non-winning .ball__count {
-  color: var(--neutral-50);
+  color: var(--lottery-ball-count-hot-color);
 }
 
 /* Maxed count: same gray as number */
 .ball--maxed .ball__count {
-  color: var(--neutral-300);
+  color: var(--lottery-ball-count-disabled-color);
 }
 
 /* Hot-maxed count: white */
 .ball--hot-maxed .ball__count {
-  color: var(--neutral-0);
+  color: var(--lottery-ball-count-hot-maxed-color);
 }
 
 /* Winning count: darker */
 .ball--winning .ball__count {
-  color: var(--neutral-700);
+  color: var(--lottery-ball-count-winning-color);
 }
 
 /* Not-drawn / no-record: hide count */
