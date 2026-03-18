@@ -341,10 +341,11 @@
 }
 
 .history-modal__grid {
-  display: grid;
-  grid-template-columns: repeat(10, 38px);
+  display: flex;
+  flex-wrap: wrap;
   gap: 9px;
   justify-content: center;
+  max-width: 100%;
 }
 
 .history-modal__ball {
@@ -817,10 +818,8 @@
   }
 
   .history-modal__grid {
-    grid-template-columns: repeat(auto-fill, 34px);
-    gap: 5px;
+    gap: 6px;
     width: 100%;
-    justify-content: space-evenly;
   }
 
   .history-modal__ball {

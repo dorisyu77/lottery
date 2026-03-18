@@ -3,3 +3,6 @@ figma-*.png
 figma-*.mjs
 node_modules/
 noUse/
+screenshots/
+playwright-report/
+test-results/

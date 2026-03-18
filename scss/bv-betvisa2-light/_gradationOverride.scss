@@ -1,0 +1,6 @@
+// Override: 修正 selected ball 顏色以符合品牌色
+:root {
+  --lottery-ball-selected-border: var(--secondary-03);
+  --lottery-ball-selected-bg: linear-gradient(318.93deg, var(--secondary-04) 11.44%, var(--secondary-01) 90.56%);
+  --lottery-pick-info-color: var(--neutral-800);
+}

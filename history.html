@@ -99,7 +99,50 @@
         <div class="header__theme-switcher">
           <select id="themeSwitcher" class="header__theme-select">
             <option value="tc_001-sp" selected>tc_001-sp</option>
+            <option value="tc_001-fun88vip-dark">tc_001-fun88vip-dark</option>
+            <option value="tc_001-fun88vip-light">tc_001-fun88vip-light</option>
+            <option value="tc_001-sb">tc_001-sb</option>
+            <option value="tc_001-gd">tc_001-gd</option>
+            <option value="tc_001-af8">tc_001-af8</option>
+            <option value="tc_001-ld">tc_001-ld</option>
+            <option value="tc_001-w98">tc_001-w98</option>
+            <option value="tc_001-b7">tc_001-b7</option>
+            <option value="tc_001-betjili">tc_001-betjili</option>
+            <option value="tc_001-bk8uk-dark">tc_001-bk8uk-dark</option>
+            <option value="tc_001-bk8uk-light">tc_001-bk8uk-light</option>
+            <option value="tc_002-mt">tc_002-mt</option>
+            <option value="tc_002-sc">tc_002-sc</option>
+            <option value="tc_003-pg">tc_003-pg</option>
+            <option value="tc_004-neobet88">tc_004-neobet88</option>
+            <option value="tc_005-69">tc_005-69</option>
+            <option value="tc_005-mb">tc_005-mb</option>
+            <option value="tc_006-md">tc_006-md</option>
+            <option value="tc_007-star">tc_007-star</option>
+            <option value="tc_007-sbt">tc_007-sbt</option>
+            <option value="tc_007-gw">tc_007-gw</option>
+            <option value="tc_008-mya777">tc_008-mya777</option>
+            <option value="tc_009-clubpgslot">tc_009-clubpgslot</option>
+            <option value="tc_010-viking888">tc_010-viking888</option>
+            <option value="tc_010-jilikh">tc_010-jilikh</option>
             <option value="tc_011-fw8">tc_011-fw8</option>
+            <option value="tc_011-kc66">tc_011-kc66</option>
+            <option value="tc_011-w98">tc_011-w98</option>
+            <option value="tc_012-5pin-dark">tc_012-5pin-dark</option>
+            <option value="tc_012-5pin-light">tc_012-5pin-light</option>
+            <option value="tc_013-sfc">tc_013-sfc</option>
+            <option value="tc_013-sw88ag">tc_013-sw88ag</option>
+            <option value="tc_013-lucksparkh">tc_013-lucksparkh</option>
+            <option value="tc_013-fc178">tc_013-fc178</option>
+            <option value="tc_014-mc">tc_014-mc</option>
+            <option value="tc_015-w98">tc_015-w98</option>
+            <option value="jw-jeetwin-dark">jw-jeetwin-dark</option>
+            <option value="jw-jeetwin-light">jw-jeetwin-light</option>
+            <option value="12betkh-dark">12betkh-dark</option>
+            <option value="12betkh-light">12betkh-light</option>
+            <option value="si-siam99-dark">si-siam99-dark</option>
+            <option value="si-siam99-light">si-siam99-light</option>
+            <option value="bv-betvisa2-dark">bv-betvisa2-dark</option>
+            <option value="bv-betvisa2-light">bv-betvisa2-light</option>
           </select>
         </div>
         <div class="header__lang">
@@ -605,20 +648,17 @@
         const data = recordData[recordIndex] || recordData[0];
         periodEl.textContent = data.period;
 
-        const selectedSet = new Set(data.selected);
         let html = '';
-        for (let i = 0; i < 100; i++) {
-          const num = i.toString().padStart(2, '0');
+        data.selected.forEach(function (num) {
+          const numStr = num.toString().padStart(2, '0');
           let cls = 'history-modal__ball';
-          if (data.winning !== null && i === data.winning) {
+          if (data.winning !== null && num === data.winning) {
             cls += ' history-modal__ball--gold';
-          } else if (selectedSet.has(i)) {
-            cls += ' history-modal__ball--selected';
           } else {
-            cls += ' history-modal__ball--gray';
+            cls += ' history-modal__ball--selected';
           }
-          html += `<div class="${cls}"><span>${num}</span></div>`;
-        }
+          html += `<div class="${cls}"><span>${numStr}</span></div>`;
+        });
         gridEl.innerHTML = html;
         overlay.classList.add('is-open');
       }

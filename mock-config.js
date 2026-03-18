@@ -54,7 +54,7 @@ var MOCK = {
       prizePool: '$10,000',
       winnersCount: 2,
       status: 'pending',         // pending | lost | won
-      selected: [3, 8, 15, 22, 33, 41, 50, 64, 78, 90],
+      selected: [3, 8, 15, 22, 33, 33, 50, 50, 78, 90],
       winning: null,
     },
     {

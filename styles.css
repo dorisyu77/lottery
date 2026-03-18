@@ -1120,7 +1120,7 @@ button {
 
 .pick-row__info {
   font-size: 12px;
-  color: var(--primary-08);
+  color: var(--lottery-pick-info-color);
   line-height: 1;
 }
 
@@ -1160,7 +1160,7 @@ button {
 }
 
 .selection-panel__btn:not(:disabled) {
-  background: var(--primary-08);
+  background: var(--lottery-btn-primary-bg);
   cursor: pointer;
 }
 
@@ -1171,7 +1171,7 @@ button {
 /* Rule Panel */
 .rule-panel {
   background: var(--neutral-0);
-  border: 1px solid var(--primary-08);
+  border: 1px solid var(--lottery-rule-border);
   border-radius: 20px;
   padding: 10px;
   display: flex;
@@ -1204,7 +1204,7 @@ button {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  background: var(--primary-08);
+  background: var(--lottery-btn-primary-bg);
   color: var(--neutral-0);
   font-size: 12.8px;
   display: flex;
@@ -1880,7 +1880,7 @@ button {
 
   .m-bottom-panel__player-count {
     font-size: 12px;
-    color: var(--primary-08);
+    color: var(--lottery-pick-info-color);
     text-align: center;
     width: 100%;
     min-height: 16px;
@@ -1901,7 +1901,7 @@ button {
   }
 
   .m-bottom-panel__btn:not(:disabled) {
-    background: var(--primary-08);
+    background: var(--lottery-btn-primary-bg);
   }
 
   /* ---- Mobile Bottom Nav ---- */

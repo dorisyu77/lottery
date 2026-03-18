@@ -1,0 +1,86 @@
+:root,
+body[data-theme="dark"] {
+  --primary-01: #c5eeee;
+  --primary-02: #acf7ff;
+  --primary-03: #76e9f7;
+  --primary-04: #04e4fe;
+  --primary-05: #4facca;
+  --primary-06: #3d91d1;
+  --primary-07: #235898;
+  --primary-08: #398c99;
+  --primary-09: #346970;
+  --primary-10: #253f43;
+
+  --secondary-01: #ffff00;
+  --secondary-02: #ffd347;
+  --secondary-03: #d6b607;
+  --secondary-04: #f7931d;
+  --secondary-05: #29df73;
+  --secondary-06: #99e6e1;
+  --secondary-07: #48d7cc;
+  --secondary-08: #ffffff00;
+  --secondary-09: #ffffff00;
+  --secondary-10: #ffffff00;
+
+  --neutral-0: #ffffff;
+  --neutral-50: #e9e9e9;
+  --neutral-100: #cfd0d0;
+  --neutral-200: #989a9d;
+  --neutral-300: #555555;
+  --neutral-400: #363636;
+  --neutral-500: #2d2d2d;
+  --neutral-600: #1b2123;
+  --neutral-700: #252525;
+  --neutral-800: #1a1a1a;
+  --neutral-900: #111111;
+  --neutral-1000: #000000;
+
+  --emotional-01: #e9113c;
+  --emotional-02: #f2708a;
+  --emotional-03: #00e701;
+  --emotional-04: #63fe64;
+  --emotional-05: #4391e7;
+  --emotional-06: #70aaeb;
+  --emotional-07: #e6a23c;
+  --emotional-08: #ffd780;
+  --emotional-09: #313D12;
+  --emotional-10: #3D1C17;
+
+  --opacity-01: #0000004d;
+  --opacity-02: #000000b2;
+  --opacity-03: #ffffff4d;
+  --opacity-04: #ffffffb2;
+  --opacity-05: #ffffff1a;
+  --opacity-06: #ffd7001a;
+  --opacity-07: #ffffff00;
+  --opacity-08: #ffffff00;
+  --opacity-09: #ffffff00;
+  --opacity-10: #ffffff00;
+
+  --gradient-01: var(--neutral-800);
+  --gradient-02: var(--primary-09);
+  --gradient-03: var(--neutral-300);
+  --gradient-04: var(--neutral-200);
+  --gradient-05: #ffffff00;
+  --gradient-06: #ffffff00;
+  --gradient-07: #ffffff00;
+  --gradient-08: #ffffff00;
+  --gradient-09: #ffffff00;
+  --gradient-10: #ffffff00;
+  --gradient-11: #ffffff00;
+  --gradient-12: #ffffff00;
+  --gradient-13: #ffffff00;
+  --gradient-14: #ffffff00;
+  --gradient-15: #ffffff00;
+  --gradient-16: #ffffff00;
+
+  --gradation-01: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-02) 100%);
+  --gradation-02: linear-gradient(180deg, var(--gradient-02) 0%, var(--gradient-02) 100%);
+  --gradation-03: linear-gradient(180deg, var(--gradient-02) 0%, var(--gradient-02) 100%);
+  --gradation-04: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-04) 50%, var(--gradient-03) 100%);
+  --gradation-05: linear-gradient(145deg, #fef3c7 0%, #fbbf24 30%, #f59e0b 60%, #d97706 100%);
+  --gradation-06: linear-gradient(145deg, #fecdd3 0%, #f43f5e 30%, #e11d48 60%, #be123c 100%);
+  --gradation-07: linear-gradient(318.93deg, var(--gradient-01) 11.44%, var(--gradient-02) 90.56%);
+  --gradation-08: linear-gradient(145.85deg, #d1d5db 10.23%, #6b7280 93.6%);
+  --gradation-09: conic-gradient(from 0deg, var(--gradient-09) 0%, var(--gradient-09) 70%, var(--gradient-10) 80%, #ffffff 85%, var(--gradient-10) 90%, var(--gradient-09) 100%);
+}

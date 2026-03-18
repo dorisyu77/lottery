@@ -19,6 +19,10 @@ for file in "$SCSS_DIR"/*/_baseColor.scss; do
   tmp="/tmp/_theme_${theme}.scss"
   echo "@import '$(cd "$(dirname "$file")" && pwd)/baseColor';" > "$tmp"
   [ -f "$COMMON" ] && echo "@import '$(cd "$(dirname "$COMMON")" && pwd)/lottery';" >> "$tmp"
+  override_dir="$(cd "$(dirname "$file")" && pwd)"
+  if [ -f "$override_dir/_gradationOverride.scss" ]; then
+    echo "@import '${override_dir}/gradationOverride';" >> "$tmp"
+  fi
 
   npx sass "$tmp" "$OUT_DIR/$theme.css" --no-source-map
   rm -f "$tmp"

@@ -101,6 +101,7 @@ body[data-theme=dark] {
   --lottery-selection-title-color: var(--neutral-400);
   --lottery-selection-badge-bg: var(--primary-08);
   --lottery-selection-badge-text: var(--neutral-0);
+  --lottery-pick-info-color: var(--primary-08);
   --lottery-selection-border: var(--neutral-50);
   --lottery-selection-pick-bg: var(--neutral-50);
   --lottery-selection-scrollbar-track: var(--neutral-50);
