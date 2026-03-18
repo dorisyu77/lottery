@@ -16,7 +16,7 @@
   font-family: 'Inter', var(--font-heading);
   font-weight: 800;
   font-size: 21.4px;
-  color: #101820;
+  color: var(--lottery-history-heading-color);
 }
 
 .history-title__back {
@@ -28,7 +28,7 @@
   gap: 4px;
   font-size: 18px;
   font-weight: 600;
-  color: var(--emotional-05);
+  color: var(--lottery-history-back-color);
 }
 
 .history-title__chevron {
@@ -44,8 +44,8 @@
 }
 
 .history-stat {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: var(--lottery-history-stat-bg);
+  border: 1px solid var(--lottery-history-stat-border);
   border-radius: 16px;
   padding: 22px 20px;
   display: flex;
@@ -58,21 +58,21 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 32px;
-  color: #1f2937;
+  color: var(--lottery-history-stat-value-color);
   line-height: 1;
 }
 
 .history-stat__value--orange {
-  color: var(--emotional-07);
+  color: var(--lottery-history-stat-orange);
 }
 
 .history-stat__value--teal {
-  color: var(--emotional-05);
+  color: var(--lottery-history-stat-teal);
 }
 
 .history-stat__label {
   font-size: 13.6px;
-  color: #6b7280;
+  color: var(--lottery-history-stat-text);
   text-align: center;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .history-record {
-  background: #f3f4f6;
+  background: var(--lottery-history-record-bg);
   border-radius: 14px;
   padding: 18px 20px;
   display: flex;
@@ -94,8 +94,8 @@
 }
 
 .history-record--won {
-  border: 2px solid var(--emotional-07);
-  box-shadow: 0 0 10px var(--emotional-07);
+  border: 2px solid var(--lottery-history-won-border);
+  box-shadow: 0 0 10px var(--lottery-history-won-border);
 }
 
 .history-record__left {
@@ -108,7 +108,7 @@
 .history-record__period {
   font-family: 'Poppins', 'Noto Sans JP', sans-serif;
   font-size: 14px;
-  color: #6b7280;
+  color: var(--lottery-history-secondary-text);
   white-space: nowrap;
 }
 
@@ -125,8 +125,8 @@
 }
 
 .history-record__ball--gray {
-  background: linear-gradient(146deg, #cfd0d0 10%, #555 94%);
-  border: 1.85px solid #989a9d;
+  background: var(--lottery-ball-non-winning-bg);
+  border: 1.85px solid var(--lottery-history-gray-ball-border);
 }
 
 .history-record__ball--gold {
@@ -150,12 +150,12 @@
   font-family: var(--font-number);
   font-size: 16.25px;
   font-weight: 900;
-  color: var(--neutral-0);
+  color: var(--lottery-history-ball-text);
   line-height: 1;
 }
 
 .history-record__ball--gold .history-record__ball-num {
-  color: var(--neutral-1000);
+  color: var(--lottery-history-ball-text-gold);
 }
 
 .history-record__info {
@@ -168,12 +168,12 @@
 .history-record__prize {
   font-family: 'Poppins', 'Noto Sans JP', sans-serif;
   font-size: 14px;
-  color: #6b7280;
+  color: var(--lottery-history-secondary-text);
 }
 
 .history-record__winners {
   font-size: 14px;
-  color: var(--emotional-05);
+  color: var(--lottery-history-winners-color);
 }
 
 .history-record__right {
@@ -195,18 +195,18 @@
 }
 
 .history-record__status--pending {
-  background: #cfd0d0;
-  color: var(--neutral-1000);
+  background: var(--lottery-history-status-pending-bg);
+  color: var(--lottery-history-status-pending-text);
 }
 
 .history-record__status--lost {
-  background: #555;
-  color: var(--neutral-0);
+  background: var(--lottery-history-status-lost-bg);
+  color: var(--lottery-history-status-lost-text);
 }
 
 .history-record__status--won {
-  background: linear-gradient(146deg, #fef3c7 0%, #ffc634 30%, #ffb12e 60%, #ff9113 100%);
-  color: var(--neutral-1000);
+  background: var(--lottery-history-won-gradient);
+  color: var(--lottery-history-status-won-text);
 }
 
 /* Mini Balls Row */
@@ -232,7 +232,7 @@
 
 .history-record__mini-ball--selected {
   background: var(--ball-selected);
-  border: 1px solid var(--primary-08);
+  border: 1px solid var(--lottery-history-mini-ball-border);
 }
 
 .history-record__mini-ball--gold {
@@ -244,12 +244,12 @@
   font-family: 'PingFang TC', var(--font-primary);
   font-size: 11.2px;
   font-weight: 600;
-  color: var(--neutral-0);
+  color: var(--lottery-history-ball-text);
   line-height: 1;
 }
 
 .history-record__mini-ball--gold span {
-  color: var(--neutral-1000);
+  color: var(--lottery-history-ball-text-gold);
 }
 
 .history-record__mini-ball::before {
@@ -266,7 +266,7 @@
 
 .history-record__more {
   font-size: 22px;
-  color: #6b7280;
+  color: var(--lottery-history-secondary-text);
   cursor: pointer;
   line-height: 1;
   flex-shrink: 0;
@@ -291,7 +291,7 @@
 }
 
 .history-modal {
-  background: #2a2a2a;
+  background: var(--lottery-history-modal-bg);
   border-radius: 16px;
   width: 480px;
   max-width: 90vw;
@@ -310,7 +310,7 @@
   right: 20px;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--lottery-history-modal-text);
   font-size: 20px;
   cursor: pointer;
   padding: 0;
@@ -321,13 +321,13 @@
   font-family: 'Inter', var(--font-heading);
   font-weight: 800;
   font-size: 24px;
-  color: #fff;
+  color: var(--lottery-history-modal-text);
   margin-top: 30px;
   margin-bottom: 8px;
 }
 
 .history-modal__heading--congrats {
-  background: linear-gradient(146deg, #fef3c7 0%, #ffc634 30%, #ffb12e 60%, #ff9113 100%);
+  background: var(--lottery-history-won-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -336,7 +336,7 @@
 .history-modal__period {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: #aaa;
+  color: var(--lottery-history-modal-period-color);
   margin-bottom: 16px;
 }
 
@@ -361,7 +361,7 @@
 
 .history-modal__ball--selected {
   background: var(--ball-selected);
-  border: 1px solid var(--primary-08);
+  border: 1px solid var(--lottery-history-mini-ball-border);
 }
 
 .history-modal__ball--gold {
@@ -370,20 +370,20 @@
 }
 
 .history-modal__ball--gray {
-  background: linear-gradient(146deg, #cfd0d0 10%, #555 94%);
-  border: 1px solid #989a9d;
+  background: var(--lottery-ball-non-winning-bg);
+  border: 1px solid var(--lottery-history-gray-ball-border);
 }
 
 .history-modal__ball span {
   font-family: 'PingFang TC', var(--font-primary);
   font-size: 14px;
   font-weight: 600;
-  color: var(--neutral-0);
+  color: var(--lottery-history-ball-text);
   line-height: 1;
 }
 
 .history-modal__ball--gold span {
-  color: var(--neutral-1000);
+  color: var(--lottery-history-ball-text-gold);
 }
 
 .history-modal__ball::before {
@@ -414,7 +414,7 @@
 }
 
 .win-modal {
-  background: #1b1b1b;
+  background: var(--lottery-win-modal-bg);
   border-radius: 16px;
   padding: 10px 20px 40px;
   max-width: 480px;
@@ -438,7 +438,7 @@
   border-radius: 6px;
   background: transparent;
   border: none;
-  color: #989a9d;
+  color: var(--lottery-win-close-color);
   font-size: 18px;
   cursor: pointer;
   display: flex;
@@ -448,7 +448,7 @@
 }
 
 .win-modal__close:hover {
-  color: white;
+  color: var(--lottery-win-close-hover-color);
 }
 
 .win-modal__decoration {
@@ -470,7 +470,7 @@
   font-size: 35.2px;
   font-weight: 600;
   font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-  background: linear-gradient(107deg, #fef3c7 0%, #fbbf24 50%, #f59e0b 100%);
+  background: var(--lottery-win-title-gradient);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -487,15 +487,15 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: linear-gradient(145deg, #fef3c7 0%, #ffc634 30%, #ffb12e 60%, #ff9113 100%);
-  border: 3px solid #e6a23c;
+  background: var(--lottery-win-ball-gradient);
+  border: 3px solid var(--lottery-win-ball-border);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 40px;
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
-  color: black;
+  color: var(--lottery-win-ball-text);
   margin: 0;
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -541,7 +541,7 @@
 .win-modal__prize-amount {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  color: #4391e7;
+  color: var(--lottery-win-amount-color);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: flex-start;
@@ -568,7 +568,7 @@
 }
 
 .win-modal__split-title {
-  color: #f87171;
+  color: var(--lottery-win-split-title-color);
   font-size: 12.8px;
   font-weight: 600;
   font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
@@ -589,7 +589,7 @@
   font-size: 19.2px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: var(--lottery-win-split-value-color);
   margin-bottom: 2px;
 }
 
@@ -608,8 +608,8 @@
   font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #1a1a2e;
+  background: var(--lottery-win-confirm-gradient);
+  color: var(--lottery-win-confirm-text);
   cursor: pointer;
   transition: all 0.3s;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
@@ -666,10 +666,10 @@
 .history-pagination__btn {
   width: 30px;
   height: 28px;
-  background: #fff;
-  border: 1px solid #e1e1e1;
+  background: var(--lottery-history-pagination-bg);
+  border: 1px solid var(--lottery-history-pagination-border);
   font-size: 16px;
-  color: #333;
+  color: var(--lottery-history-pagination-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -689,14 +689,14 @@
   justify-content: center;
   font-size: 14px;
   font-weight: 600;
-  color: #333;
-  border: 1px solid #e1e1e1;
+  color: var(--lottery-history-pagination-text);
+  border: 1px solid var(--lottery-history-pagination-border);
 }
 
 .history-pagination__page--active {
-  background: var(--neutral-1000);
-  color: var(--neutral-0);
-  border-color: var(--neutral-1000);
+  background: var(--lottery-history-pagination-active-bg);
+  color: var(--lottery-history-pagination-active-text);
+  border-color: var(--lottery-history-pagination-active-bg);
 }
 
 /* =============================================
