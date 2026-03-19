@@ -240,3 +240,20 @@
   --lottery-mobile-nav-text: var(--neutral-300);
   --lottery-mobile-nav-active-text: var(--neutral-0);
 }
+
+:root {
+  --lottery-ball-selected-border: var(--primary-03);
+  --lottery-pick-info-color: var(--neutral-800);
+  --lottery-ball-selected-bg: linear-gradient(318.93deg, var(--primary-06) 11.44%, var(--primary-05) 90.56%);
+  --lottery-ball-count-selected-color: var(--neutral-0);
+  --lottery-ball-count-color: var(--neutral-700);
+  --lottery-legend-label: var(--neutral-500);
+  --lottery-rule-text-color: var(--neutral-500);
+  --ball-selected-border: var(--primary-05);
+  --lottery-history-mini-ball-border: var(--primary-05);
+  --lottery-btn-primary-bg: var(--primary-04);
+  --lottery-selection-btn-hover-bg: var(--primary-05);
+  --lottery-countdown-card-top-bg: var(--primary-06);
+  --lottery-countdown-card-bottom-bg: var(--primary-05);
+  --lottery-ball-count-hot-color: var(--neutral-0);
+}

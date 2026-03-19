@@ -1,0 +1,19 @@
+// Override: 修正以符合品牌色
+:root {
+  --lottery-ball-selected-border: var(--primary-03);
+  --lottery-pick-info-color: var(--neutral-800);
+  --lottery-ball-selected-bg: linear-gradient(318.93deg, var(--primary-08) 11.44%, var(--primary-04) 90.56%);
+  --lottery-ball-count-selected-color: var(--neutral-0);
+  --lottery-ball-count-color: var(--neutral-700);
+  --lottery-legend-label: var(--neutral-500);
+  --lottery-rule-text-color: var(--neutral-500);
+  --ball-selected-border: var(--primary-04);
+  --lottery-history-mini-ball-border: var(--primary-04);
+  --lottery-btn-primary-bg: var(--primary-04);
+  --lottery-selection-btn-hover-bg: var(--primary-04);
+  --lottery-countdown-card-top-bg: var(--primary-08);
+  --lottery-countdown-card-bottom-bg: var(--primary-04);
+
+  --lottery-ball-count-hot-color: var(--neutral-0);
+
+}
