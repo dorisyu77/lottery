@@ -1,5 +1,4 @@
-:root,
-body[data-theme=dark] {
+:root {
   --primary-01: #ff0033;
   --primary-02: #ff0000;
   --primary-03: #e60000;
@@ -40,8 +39,8 @@ body[data-theme=dark] {
   --emotional-06: #7dbdff;
   --emotional-07: #e6a23c;
   --emotional-08: #facb82;
-  --emotional-09: #313D12;
-  --emotional-10: #3D1C17;
+  --emotional-09: #313d12;
+  --emotional-10: #3d1c17;
   --opacity-01: #0000004d;
   --opacity-02: #000000b2;
   --opacity-03: #ffffff4d;
@@ -240,4 +239,22 @@ body[data-theme=dark] {
   --lottery-mobile-tab-active-text: var(--neutral-1000);
   --lottery-mobile-nav-text: var(--neutral-300);
   --lottery-mobile-nav-active-text: var(--neutral-0);
+}
+
+:root {
+  --lottery-ball-selected-border: var(--primary-03);
+  --lottery-pick-info-color: var(--neutral-800);
+  --lottery-ball-selected-bg: linear-gradient(318.93deg, var(--primary-03) 11.44%, var(--primary-05) 90.56%);
+  --lottery-ball-count-selected-color: var(--neutral-0);
+  --lottery-ball-count-color: var(--neutral-700);
+  --lottery-legend-label: var(--neutral-500);
+  --lottery-rule-text-color: var(--neutral-500);
+  --ball-selected-border: var(--primary-02);
+  --lottery-history-mini-ball-border: var(--primary-02);
+  --lottery-btn-primary-bg: var(--primary-02);
+  --lottery-selection-btn-hover-bg: var(--primary-03);
+  --lottery-countdown-card-top-bg: var(--primary-05);
+  --lottery-countdown-card-bottom-bg: var(--primary-03);
+  --lottery-history-stat-text: var(--neutral-800);
+  --lottery-history-secondary-text: var(--neutral-800);
 }

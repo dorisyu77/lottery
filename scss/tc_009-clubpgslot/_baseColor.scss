@@ -1,5 +1,4 @@
-:root,
-body[data-theme="dark"] {
+:root {
   --primary-01: #ffdb57;
   --primary-02: #ffd347;
   --primary-03: #ffee00;
@@ -43,8 +42,8 @@ body[data-theme="dark"] {
   --emotional-06: #70aaeb;
   --emotional-07: #e6a23c;
   --emotional-08: #ffd780;
-  --emotional-09: #313D12;
-  --emotional-10: #3D1C17;
+  --emotional-09: #313d12;
+  --emotional-10: #3d1c17;
 
   --opacity-01: #0000004d;
   --opacity-02: #000000b2;
@@ -62,7 +61,7 @@ body[data-theme="dark"] {
   --gradient-03: var(--primary-06);
   --gradient-04: var(--neutral-400);
   --gradient-05: var(--neutral-200);
-  --gradient-06: #cc9900;
+  --gradient-06: #ffffff00;
   --gradient-07: #ffffff00;
   --gradient-08: #ffffff00;
   --gradient-09: #ffffff00;
@@ -78,6 +77,8 @@ body[data-theme="dark"] {
   --gradation-02: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-03) 100%);
   --gradation-03: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-03) 100%);
   --gradation-04: linear-gradient(180deg, var(--gradient-04) 0%, var(--gradient-05) 50%, var(--gradient-04) 100%);
+
+  --custom-01: #fffc;
   --gradation-05: linear-gradient(145deg, #fef3c7 0%, #fbbf24 30%, #f59e0b 60%, #d97706 100%);
   --gradation-06: linear-gradient(145deg, #fecdd3 0%, #f43f5e 30%, #e11d48 60%, #be123c 100%);
   --gradation-07: linear-gradient(318.93deg, var(--gradient-01) 11.44%, var(--gradient-02) 90.56%);

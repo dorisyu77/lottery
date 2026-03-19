@@ -1,5 +1,4 @@
-:root,
-body[data-theme="dark"] {
+:root {
   --primary-01: #a0effe;
   --primary-02: #7effff;
   --primary-03: #29d2d2;
@@ -78,6 +77,12 @@ body[data-theme="dark"] {
   --gradation-02: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-04) 100%);
   --gradation-03: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-02) 100%);
   --gradation-04: linear-gradient(180deg, var(--gradient-06) 0%, var(--gradient-07) 50%, var(--gradient-06) 100%);
+  --gradation-05: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-06: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-07: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-08: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-09: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-10: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
   --gradation-05: linear-gradient(145deg, #fef3c7 0%, #fbbf24 30%, #f59e0b 60%, #d97706 100%);
   --gradation-06: linear-gradient(145deg, #fecdd3 0%, #f43f5e 30%, #e11d48 60%, #be123c 100%);
   --gradation-07: linear-gradient(318.93deg, var(--gradient-01) 11.44%, var(--gradient-02) 90.56%);

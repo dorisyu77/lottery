@@ -1,5 +1,4 @@
-:root,
-body[data-theme=dark] {
+:root {
   --primary-01: #fff7e6;
   --primary-02: #ffe8b7;
   --primary-03: #f9d997;
@@ -60,8 +59,8 @@ body[data-theme=dark] {
   --gradient-06: var(--neutral-400);
   --gradient-07: var(--secondary-04);
   --gradient-08: var(--secondary-02);
-  --gradient-09: var(--primary-04);
-  --gradient-10: var(--primary-02);
+  --gradient-09: #ffffff00;
+  --gradient-10: #ffffff00;
   --gradient-11: #ffffff00;
   --gradient-12: #ffffff00;
   --gradient-13: #ffffff00;
@@ -69,9 +68,9 @@ body[data-theme=dark] {
   --gradient-15: #ffffff00;
   --gradient-16: #ffffff00;
   --gradation-01: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-02) 100%);
-  --gradation-02: linear-gradient(180deg, var(--gradient-02) 0%, var(--gradient-02) 100%);
-  --gradation-03: linear-gradient(180deg, var(--gradient-02) 0%, var(--gradient-02) 100%);
-  --gradation-04: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-04) 50%, var(--gradient-03) 100%);
+  --gradation-02: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-03) 100%);
+  --gradation-03: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-03) 100%);
+  --gradation-04: linear-gradient(180deg, var(--gradient-05) 0%, var(--gradient-04) 50% , var(--gradient-05) 100%);
   --gradation-05: linear-gradient(145deg, #fef3c7 0%, #fbbf24 30%, #f59e0b 60%, #d97706 100%);
   --gradation-06: linear-gradient(145deg, #fecdd3 0%, #f43f5e 30%, #e11d48 60%, #be123c 100%);
   --gradation-07: linear-gradient(318.93deg, var(--gradient-01) 11.44%, var(--gradient-02) 90.56%);
@@ -240,4 +239,22 @@ body[data-theme=dark] {
   --lottery-mobile-tab-active-text: var(--neutral-1000);
   --lottery-mobile-nav-text: var(--neutral-300);
   --lottery-mobile-nav-active-text: var(--neutral-0);
+}
+
+:root {
+  --lottery-ball-selected-border: var(--primary-03);
+  --lottery-pick-info-color: var(--neutral-800);
+  --lottery-ball-selected-bg: linear-gradient(318.93deg, var(--primary-06) 11.44%, var(--primary-05) 90.56%);
+  --lottery-ball-count-selected-color: var(--neutral-0);
+  --lottery-ball-count-color: var(--neutral-700);
+  --lottery-legend-label: var(--neutral-500);
+  --lottery-rule-text-color: var(--neutral-500);
+  --ball-selected-border: var(--primary-05);
+  --lottery-history-mini-ball-border: var(--primary-05);
+  --lottery-btn-primary-bg: var(--primary-05);
+  --lottery-selection-btn-hover-bg: var(--primary-06);
+  --lottery-countdown-card-top-bg: var(--primary-06);
+  --lottery-countdown-card-bottom-bg: var(--primary-05);
+  --lottery-history-stat-text: var(--neutral-800);
+  --lottery-history-secondary-text: var(--neutral-800);
 }

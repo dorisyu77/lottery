@@ -1,0 +1,91 @@
+:root {
+  --primary-01: #fdf295;
+  --primary-02: #ffff00;
+  --primary-03: #fbed1f;
+  --primary-04: #ffd347;
+  --primary-05: #ffd325;
+  --primary-06: #ffffff00;
+  --primary-07: #ffffff00;
+  --primary-08: #182326;
+  --primary-09: #283a3e;
+  --primary-10: #ffffff00;
+
+  --secondary-01: #fbdf93;
+  --secondary-02: #fccd4d;
+  --secondary-03: #faa74d;
+  --secondary-04: #f8b500;
+  --secondary-05: #e7a326;
+  --secondary-06: #f69220;
+  --secondary-07: #c69a2c;
+  --secondary-08: #b5892d;
+  --secondary-09: #875221;
+  --secondary-10: #26aae1;
+
+  --neutral-0: #ffffff;
+  --neutral-50: #cccccc;
+  --neutral-100: #c7c7c7;
+  --neutral-200: #c2c2c2;
+  --neutral-300: #a6a8ab;
+  --neutral-400: #7f8080;
+  --neutral-500: #6d6e70;
+  --neutral-600: #58595b;
+  --neutral-700: #414141;
+  --neutral-800: #2c2728;
+  --neutral-900: #231f20;
+  --neutral-1000: #000000;
+
+  --emotional-01: #e9113c;
+  --emotional-02: #f2708a;
+  --emotional-03: #67c23a;
+  --emotional-04: #a2e081;
+  --emotional-05: #409eff;
+  --emotional-06: #7dbdff;
+  --emotional-07: #e6a23c;
+  --emotional-08: #facb82;
+  --emotional-09: #313d12;
+  --emotional-10: #3d1c17;
+
+  --opacity-01: #0000004d;
+  --opacity-02: #000000b2;
+  --opacity-03: #ffffff4d;
+  --opacity-04: #ffffffb2;
+  --opacity-05: #ffffff1a;
+  --opacity-06: #ffd7001a;
+  --opacity-07: #c6331fcc;
+  --opacity-08: #ffffff00;
+  --opacity-09: #ffffff00;
+  --opacity-10: #ffffff00;
+
+  --gradient-01: var(--neutral-900);
+  --gradient-02: var(--neutral-700);
+  --gradient-03: var(--neutral-600);
+  --gradient-04: var(--neutral-900);
+  --gradient-05: var(--neutral-1000);
+  --gradient-06: var(--neutral-300);
+  --gradient-07: var(--neutral-800);
+  --gradient-08: var(--neutral-400);
+  --gradient-09: var(--primary-02);
+  --gradient-10: var(--secondary-03);
+  --gradient-11: var(--secondary-06);
+  --gradient-12: var(--neutral-0);
+  --gradient-13: #ffffff00;
+  --gradient-14: #ffffff00;
+  --gradient-15: #ffffff00;
+  --gradient-16: #ffffff00;
+
+  --gradation-01: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-02) 100%);
+  --gradation-02: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-02) 50%, var(--gradient-03) 75%, var(--gradient-03) 100%);
+  --gradation-03: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-04) 100%);
+  --gradation-04: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-06) 50%, var(--gradient-03) 100%);
+  --gradation-05: linear-gradient(180deg, var(--gradient-09) 0%, var(--gradient-10) 50%, var(--gradient-11) 51%, var(--gradient-11) 100%);
+  --gradation-06: linear-gradient(180deg, var(--gradient-12) 0%, var(--gradient-06) 20%, var(--gradient-03) 50%, var(--gradient-04) 75%, var(--gradient-05) 100%);
+  --gradation-07: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-08: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-09: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-10: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%);
+  --gradation-05: linear-gradient(145deg, #fef3c7 0%, #fbbf24 30%, #f59e0b 60%, #d97706 100%);
+  --gradation-06: linear-gradient(145deg, #fecdd3 0%, #f43f5e 30%, #e11d48 60%, #be123c 100%);
+  --gradation-07: linear-gradient(318.93deg, var(--gradient-01) 11.44%, var(--gradient-02) 90.56%);
+  --gradation-08: linear-gradient(145.85deg, #d1d5db 10.23%, #6b7280 93.6%);
+  --gradation-09: conic-gradient(from 0deg, #ffffff00 0%, #ffffff00 70%, #ffffff00 80%, #ffffff 85%, #ffffff00 90%, #ffffff00 100%);
+}

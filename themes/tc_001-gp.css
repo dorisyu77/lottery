@@ -1,5 +1,5 @@
 :root,
-body[data-theme=dark] {
+body[data-theme=light] {
   --primary-01: #c5eeee;
   --primary-02: #acf7ff;
   --primary-03: #76e9f7;
@@ -40,8 +40,8 @@ body[data-theme=dark] {
   --emotional-06: #70aaeb;
   --emotional-07: #e6a23c;
   --emotional-08: #ffd780;
-  --emotional-09: #313D12;
-  --emotional-10: #3D1C17;
+  --emotional-09: #313d12;
+  --emotional-10: #3d1c17;
   --opacity-01: #0000004d;
   --opacity-02: #000000b2;
   --opacity-03: #ffffff4d;
@@ -69,9 +69,11 @@ body[data-theme=dark] {
   --gradient-15: #ffffff00;
   --gradient-16: #ffffff00;
   --gradation-01: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-02) 100%);
-  --gradation-02: linear-gradient(180deg, var(--gradient-05) 0%, var(--gradient-05) 100%);
-  --gradation-03: linear-gradient(180deg, var(--gradient-06) 0%, var(--gradient-06) 100%);
-  --gradation-04: linear-gradient(180deg, var(--gradient-04) 0%, var(--gradient-03) 50%, var(--gradient-04) 100%);
+  --gradation-02: linear-gradient(180deg, var(--gradient-02) 0%, var(--gradient-02) 100%);
+  --gradation-03: linear-gradient(180deg, var(--gradient-02) 0%, var(--gradient-02) 100%);
+  --gradation-04: linear-gradient(180deg, var(--gradient-03) 0%, var(--gradient-04) 50%, var(--gradient-03) 100%);
+  --custom-01: #11111180;
+  --custom-02: #ffffff33;
   --gradation-05: linear-gradient(145deg, #fef3c7 0%, #fbbf24 30%, #f59e0b 60%, #d97706 100%);
   --gradation-06: linear-gradient(145deg, #fecdd3 0%, #f43f5e 30%, #e11d48 60%, #be123c 100%);
   --gradation-07: linear-gradient(318.93deg, var(--gradient-01) 11.44%, var(--gradient-02) 90.56%);

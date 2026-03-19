@@ -1,5 +1,4 @@
-:root,
-body[data-theme="dark"] {
+:root {
   --primary-01: #fff7d4;
   --primary-02: #ffe4af;
   --primary-03: #ffee00;
@@ -49,7 +48,7 @@ body[data-theme="dark"] {
   --opacity-01: #0000004d;
   --opacity-02: #000000b2;
   --opacity-03: #ffffff4d;
-  --opacity-04: #ffffff00;
+  --opacity-04: #ffffffb2;
   --opacity-05: #ffffff1a;
   --opacity-06: #ffd7001a;
   --opacity-07: #ffffff00;
@@ -57,7 +56,7 @@ body[data-theme="dark"] {
   --opacity-09: #ffffff00;
   --opacity-10: #ffffff00;
 
-  --gradient-01: var(--primary-09);
+   --gradient-01: var(--primary-09);
   --gradient-02: var(--primary-07);
   --gradient-03: var(--primary-02);
   --gradient-04: var(--primary-05);

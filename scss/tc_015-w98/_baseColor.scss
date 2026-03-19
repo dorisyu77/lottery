@@ -1,5 +1,5 @@
-:root,
-body[data-theme="dark"] {
+// baseColor 放在 base 一份基礎的，客站只是覆蓋
+:root {
   --primary-01: #ffcbb1;
   --primary-02: #ffaf95;
   --primary-03: #ff947b;
@@ -10,19 +10,18 @@ body[data-theme="dark"] {
   --primary-08: #811313;
   --primary-09: #661100;
   --primary-10: #4f0404;
-
   --secondary-01: #fffa8c;
   --secondary-02: #d5bf00;
   --secondary-03: #c3a16b;
   --secondary-04: #ad8444;
-  --secondary-05: #dddddd00;
+  --secondary-05: #ffda44;
   --secondary-06: #dddddd00;
   --secondary-07: #dddddd00;
   --secondary-08: #dddddd00;
   --secondary-09: #dddddd00;
   --secondary-10: #dddddd00;
-
   --neutral-0: #ffffff;
+  --neutral-0-rgb: 255, 255, 255;
   --neutral-50: #f3f3f3;
   --neutral-100: #d1d1d1;
   --neutral-200: #b9b9b9;
@@ -34,7 +33,7 @@ body[data-theme="dark"] {
   --neutral-800: #232528;
   --neutral-900: #1b1b1b;
   --neutral-1000: #000000;
-
+  --neutral-1000-rgb: 0, 0, 0;
   --emotional-01: #e9113c;
   --emotional-02: #f2708a;
   --emotional-03: #00e701;
@@ -43,7 +42,6 @@ body[data-theme="dark"] {
   --emotional-06: #70aaeb;
   --emotional-07: #e6a23c;
   --emotional-08: #ffd780;
-
   --opacity-01: #ffffff1a;
   --opacity-02: #ffffff4d;
   --opacity-03: #00000033;
@@ -54,7 +52,6 @@ body[data-theme="dark"] {
   --opacity-08: #ffffff00;
   --opacity-09: #ffffff00;
   --opacity-10: #ffffff00;
-
   --gradient-01: var(--primary-08);
   --gradient-02: var(--primary-09);
   --gradient-03: var(--primary-10);
@@ -71,11 +68,19 @@ body[data-theme="dark"] {
   --gradient-14: #ffffff00;
   --gradient-15: #ffffff00;
   --gradient-16: #ffffff00;
-
   --gradation-01: linear-gradient(180deg, var(--gradient-08) 40%, var(--gradient-01) 100%);
   --gradation-02: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-02) 100%);
   --gradation-03: linear-gradient(180deg, var(--gradient-04) 0%, var(--gradient-05) 100%);
   --gradation-04: linear-gradient(180deg, var(--gradient-08) 0%, var(--gradient-09) 100%);
+  --gradation-05: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-03) 100%);
+  --gradation-06: linear-gradient(180deg, var(--gradient-04) 0%, var(--gradient-05) 100%);
+  --gradation-07: linear-gradient(180deg, var(--gradient-04) 0%, var(--gradient-06) 100%);
+  --gradation-08: linear-gradient(90deg, var(--gradient-02) 10%, var(--gradient-09) 100%);
+  --gradation-09: linear-gradient(270deg, var(--gradient-08) 0%, var(--gradient-04) 100%);
+  --golden-gradient-01: linear-gradient(180deg, #F6A415 0%, #F9E98A 100%);
+  --golden-gradient-02: linear-gradient(180deg, #FDE67C 0%, #FFA509 100%);
+  --silver-gradient-01: linear-gradient(180deg, #5E7886 0%, #A1B8D6 100%);;
+  --silver-gradient-02: linear-gradient(180deg, #A2B9D7 0%, #5E7886 100%);
   --gradation-05: linear-gradient(145deg, #fef3c7 0%, #fbbf24 30%, #f59e0b 60%, #d97706 100%);
   --gradation-06: linear-gradient(145deg, #fecdd3 0%, #f43f5e 30%, #e11d48 60%, #be123c 100%);
   --gradation-07: linear-gradient(318.93deg, var(--gradient-01) 11.44%, var(--gradient-02) 90.56%);

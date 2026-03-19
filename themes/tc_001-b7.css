@@ -1,5 +1,4 @@
-:root,
-body[data-theme=dark] {
+:root {
   --primary-01: #fddca7;
   --primary-02: #f8d8a3;
   --primary-03: #c1a87d;
@@ -40,8 +39,8 @@ body[data-theme=dark] {
   --emotional-06: #7dbdff;
   --emotional-07: #e6a23c;
   --emotional-08: #facb82;
-  --emotional-09: #313D12;
-  --emotional-10: #3D1C17;
+  --emotional-09: #313d12;
+  --emotional-10: #3d1c17;
   --opacity-01: #0000004d;
   --opacity-02: #000000b2;
   --opacity-03: #ffffff4d;
@@ -57,17 +56,17 @@ body[data-theme=dark] {
   --gradient-03: var(--neutral-200);
   --gradient-04: var(--primary-01);
   --gradient-05: var(--primary-03);
-  --gradient-06: #ffffff00;
-  --gradient-07: #ffffff00;
-  --gradient-08: #ffffff00;
-  --gradient-09: #ffffff00;
-  --gradient-10: #ffffff00;
-  --gradient-11: #ffffff00;
-  --gradient-12: #ffffff00;
-  --gradient-13: #ffffff00;
-  --gradient-14: #ffffff00;
-  --gradient-15: #ffffff00;
-  --gradient-16: #ffffff00;
+  --gradient-06: #ffffff;
+  --gradient-07: #ffffff;
+  --gradient-08: #ffffff;
+  --gradient-09: #ffffff;
+  --gradient-10: #ffffff;
+  --gradient-11: #ffffff;
+  --gradient-12: #ffffff;
+  --gradient-13: #ffffff;
+  --gradient-14: #ffffff;
+  --gradient-15: #ffffff;
+  --gradient-16: #ffffff;
   --gradation-01: linear-gradient(180deg, var(--gradient-01) 0%, var(--gradient-02) 100%);
   --gradation-02: linear-gradient(180deg, var(--gradient-05) 0%, var(--gradient-05) 100%);
   --gradation-03: linear-gradient(180deg, var(--gradient-05) 0%, var(--gradient-05) 100%);

@@ -1,5 +1,14 @@
-:root,
-body[data-theme=dark] {
+:root {
+  --opacity-01: #0000004d;
+  --opacity-02: #000000b2;
+  --opacity-03: #ffffff4d;
+  --opacity-04: #ffffffb2;
+  --opacity-05: #ffffff1a;
+  --opacity-06: #ffd7001a;
+  --opacity-07: #ffffff00;
+  --opacity-08: #ffffff00;
+  --opacity-09: #ffffff00;
+  --opacity-10: #ffffff00;
   --primary-01: #b8e4ea;
   --primary-02: #0bf6fd;
   --primary-03: #23f6ff;
@@ -40,18 +49,8 @@ body[data-theme=dark] {
   --emotional-06: #70aaeb;
   --emotional-07: #e6a23c;
   --emotional-08: #ffd780;
-  --emotional-09: #313D12;
-  --emotional-10: #3D1C17;
-  --opacity-01: #0000004d;
-  --opacity-02: #000000b2;
-  --opacity-03: #ffffff4d;
-  --opacity-04: #ffffffb2;
-  --opacity-05: #ffffff1a;
-  --opacity-06: #ffd7001a;
-  --opacity-07: #ffffff00;
-  --opacity-08: #ffffff00;
-  --opacity-09: #ffffff00;
-  --opacity-10: #ffffff00;
+  --emotional-09: #313d12;
+  --emotional-10: #3d1c17;
   --gradient-01: var(--neutral-900);
   --gradient-02: var(--primary-08);
   --gradient-03: var(--primary-03);
@@ -240,4 +239,23 @@ body[data-theme=dark] {
   --lottery-mobile-tab-active-text: var(--neutral-1000);
   --lottery-mobile-nav-text: var(--neutral-300);
   --lottery-mobile-nav-active-text: var(--neutral-0);
+}
+
+:root {
+  --lottery-ball-selected-border: var(--primary-04);
+  --lottery-pick-info-color: var(--neutral-800);
+  --lottery-ball-selected-bg: linear-gradient(318.93deg, var(--primary-05) 11.44%, var(--primary-04) 90.56%);
+  --lottery-ball-count-selected-color: var(--neutral-0);
+  --lottery-ball-count-color: var(--neutral-700);
+  --lottery-legend-label: var(--neutral-500);
+  --lottery-rule-text-color: var(--neutral-500);
+  --ball-selected-border: var(--primary-05);
+  --lottery-history-mini-ball-border: var(--primary-05);
+  --lottery-btn-primary-bg: var(--primary-05);
+  --lottery-selection-btn-hover-bg: var(--primary-04);
+  --lottery-countdown-card-top-bg: var(--primary-05);
+  --lottery-countdown-card-bottom-bg: var(--primary-04);
+  --lottery-history-stat-text: var(--neutral-800);
+  --lottery-history-secondary-text: var(--neutral-800);
+  --lottery-selection-pick-bg: var(--neutral-50);
 }
