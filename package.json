@@ -3,10 +3,6 @@
     "build:themes": "bash build-themes.sh"
   },
   "devDependencies": {
-    "playwright-core": "^1.58.2",
     "sass": "^1.97.3"
-  },
-  "dependencies": {
-    "@playwright/test": "^1.58.2"
   }
 }

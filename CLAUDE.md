@@ -18,25 +18,24 @@ npm run build:themes # 編譯 SCSS → themes/*.css
 TC-lottery-prototype/
 ├── index.html              # 主頁（選號）
 ├── history.html            # 歷史記錄頁
-├── win-modal.html          # 中獎彈窗 Demo
 ├── styles.css              # 主樣式（手寫，引用 --lottery-* 變數）
 ├── history.css             # 歷史頁樣式
 ├── app.js                  # 倒數計時 + 選號互動
+├── mock-config.js          # 集中管理 Demo 資料（號碼、期數等）
 ├── theme-switcher.js       # 主題切換（動態載入 themes/*.css）
+├── generate-base-colors.js # 從 online-theme 提取色彩變數
 ├── build-themes.sh         # SCSS → CSS 編譯腳本
-├── themes/                 # [Build 產出] 瀏覽器載入的主題 CSS
-│   ├── tc_001-sp.css
-│   └── tc_011-fw8.css
+├── themes/                 # [Build 產出] 瀏覽器載入的主題 CSS（50+）
 ├── scss/
-│   ├── _custom-sp.scss     # 主入口（import theme + common）
 │   ├── common/
 │   │   └── _lottery.scss   # 共用語義化變數（--lottery-*）
-│   ├── tc_001-sp/
-│   │   └── _baseColor.scss # 青綠色系主題
-│   └── tc_011-fw8/
-│       └── _baseColor.scss # fw8 主題
-├── assets/                 # 圖片資源（全部被 HTML 引用）
-└── noUse/                  # 未使用的檔案（figma 截圖等）
+│   ├── tc_001-sp/          # 主題資料夾範例
+│   │   ├── _baseColor.scss            # 基礎調色盤（必要）
+│   │   └── _gradationOverride.scss    # 漸層覆蓋（選用，大多數主題有）
+│   ├── si-siam99-dark/     # siam99 系列 dark 變體
+│   ├── tc_000-bwin789-dark/# 待分配編號的新主題
+│   └── ...                 # 共 52 個主題資料夾
+└── assets/                 # 圖片資源（全部被 HTML 引用）
 ```
 
 ## 色彩變數三層架構
@@ -131,7 +130,7 @@ bash build-themes.sh
 
 編譯流程：
 - 掃描 `scss/` 下所有含 `_baseColor.scss` 的資料夾（排除 common）
-- 每個主題合併 `_baseColor.scss` + `common/_lottery.scss`
+- 每個主題合併 `_baseColor.scss` + `common/_lottery.scss` + `_gradationOverride.scss`（如果存在）
 - 產出到 `themes/{theme}.css`
 
 ## 主題切換機制
@@ -139,6 +138,32 @@ bash build-themes.sh
 - `theme-switcher.js` 監聽右上角 `<select>` 變化
 - 動態建立 `<link>` 標籤載入 `themes/{theme}.css`
 - 選擇存入 `localStorage`，下次開啟自動恢復
+
+## UX 流程
+
+### 選號頁（index.html）
+1. 進入頁面，顯示倒數計時 Banner（距離開獎時間）
+   - 依照後台設定
+2. 從 100 顆號碼球（00-99）中選號，每顆球最多被 {數值}人選，每人最多選 {數值}顆
+   - 如果後台有開啟此功能才顯示，並依照後台設定顯示
+3. 熱門號碼（{數值} 人選取）標記為 hot 狀態
+   - 設定固定值，超過極為熱門號碼
+4. 選號後側邊面板（Desktop）或底部面板（Mobile）即時更新
+5. 確認選號送出
+
+### 歷史記錄頁（history.html）
+1. 進入頁面，若有中獎紀錄且為首次查看 → 彈出恭喜中獎 Modal（含 confetti + fireworks 動效）
+2. 中獎 Modal 只顯示第一次，關閉後不再出現（透過 localStorage 記錄）
+3. 點擊歷史紀錄可展開查看選號明細，中獎號碼以金色標示
+4. 紀錄狀態：尚未開獎（pending）、未中獎（lost）、中獎（won）
+
+### 號碼球狀態
+- `available`：可選取
+- `selected`：已選取
+- `hot`：熱門（{數值} 人選取）
+- `hot-selected`：熱門 + 已選取
+- `maxed`：已滿額（達到 {數值} 人上限）
+- `hot-maxed`：熱門 + 已滿額
 
 ## 開發規範
 
@@ -158,4 +183,8 @@ bash build-themes.sh
 ### 命名規則
 - baseColor：`--{category}-{number}`（如 `--primary-08`、`--neutral-300`）
 - lottery 變數：`--lottery-{區塊}-{屬性}`（如 `--lottery-ball-selected-border`）
-- 主題資料夾：`tc_{編號}-{後綴}`（如 `tc_001-sp`、`tc_011-fw8`）
+- 主題資料夾命名格式：
+  - `tc_{NNN}-{name}` — 標準主題（如 `tc_001-sp`、`tc_011-fw8`）
+  - `tc_000-{name}` — 待分配編號的新主題（如 `tc_000-bwin789-dark`）
+  - `si-{name}-{dark|light}` — siam99 系列（如 `si-siam99-dark`）
+  - `tc_{NNN}-{name}-dark` / `tc_{NNN}-{name}-light` — 雙色系主題的 dark/light 變體

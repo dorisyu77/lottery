@@ -1,8 +1,0 @@
-//- custom-sp 主入口
-//- 引用當前主題的 baseColor + 共用 lottery 變數
-
-// 預設主題 (tc_001-sp)
-@import "tc_001-sp/baseColor";
-
-// 共用元件變數（不分主題）
-@import "common/lottery";
